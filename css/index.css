@@ -1,4 +1,3 @@
-/* 지윤 */
 @import url(reset.css);
 
 @font-face {
@@ -35,6 +34,10 @@
   font-style: normal;
 }
 
+/* 지수 */
+/* //지수 */
+
+/* 지윤 */
 main#container {
   /* width: 1920px; */
   overflow: hidden;
@@ -281,3 +284,7 @@ article.banner_line_img div.button_img img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/* //지윤  */
+
+/* 규선 */
+/* //규선 */
