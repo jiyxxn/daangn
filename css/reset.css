@@ -49,7 +49,6 @@ img {
   vertical-align: middle;
 }
 
-/* display: none;과 visibility: hidden;의 차이 - display: none;은 시각장애인에게 안내되지 않음 */
 hr {
   display: none;
 }
