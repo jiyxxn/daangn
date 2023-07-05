@@ -1,0 +1,33 @@
+.bg-icon_psw_bicycle {
+    width: 545px; height: 545px;
+    background: url('css_sprites.png') -10px -10px;
+}
+
+bg-icon_psw_chair {
+    width: 545px; height: 545px;
+    background: url('css_sprites.png') -575px -10px;
+}
+
+.bg-icon_psw_desk {
+    width: 545px; height: 545px;
+    background: url('css_sprites.png') -10px -575px;
+}
+
+.bg-icon_psw_moniter {
+    width: 545px; height: 545px;
+    background: url('css_sprites.png') -575px -575px;
+
+.bg-icon_psw_pad {
+    width: 545px; height: 545px;
+    background: url('css_sprites.png') -1140px -10px;
+}
+
+.bg-icon_psw_padding {
+    width: 545px; height: 545px;
+    background: url('css_sprites.png') -1140px -575px;
+}
+
+bg-icon_psw_refrigerator {
+    width: 545px; height: 545px;
+    background: url('css_sprites.png') -10px -1140px;
+}
