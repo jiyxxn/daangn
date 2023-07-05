@@ -1,6 +1,5 @@
 /* reset.css */
 
-/* 하나의 CSS 파일에 한 번은 넣어줘야 함 */
 @charset "utf-8";
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, strong, sub, sup, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, summary, small, b, i, article, aside, canvas, details, figcaption, figure, footer, header, menu, nav, section, time, mark, audio, video {
@@ -12,7 +11,6 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section,
   display: block;
 }
 
-/* 셀과 셀 사이의 간격 없애기 */
 table {
   border-collapse: collapse;
 }
@@ -39,12 +37,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-/* 인용 */
 q:before, q:after {
   content: "";
 }
 
-/* 축약 태그. mouseover하면 title에 적힌 원문이 나옴. <acronym>은 HTML5에서 사용되지 않으며 <abbr>로 대체됨 */
 abbr, acronym {
   border: 0;
 }
