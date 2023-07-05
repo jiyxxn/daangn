@@ -1,3 +1,72 @@
-* {
-  box-sizing: border-box;
+/* reset.css */
+
+/* 하나의 CSS 파일에 한 번은 넣어줘야 함 */
+@charset "utf-8";
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, strong, sub, sup, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, summary, small, b, i, article, aside, canvas, details, figcaption, figure, footer, header, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, video {
+  display: block;
+}
+
+/* 셀과 셀 사이의 간격 없애기 */
+table {
+  border-collapse: collapse;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, em, strong, th {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* 인용 */
+q:before, q:after {
+  content: "";
+}
+
+/* 축약 태그. mouseover하면 title에 적힌 원문이 나옴. <acronym>은 HTML5에서 사용되지 않으며 <abbr>로 대체됨 */
+abbr, acronym {
+  border: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* display: none;과 visibility: hidden;의 차이 - display: none;은 시각장애인에게 안내되지 않음 */
+hr {
+  display: none;
+}
+
+#skipNavi, .blind {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  text-indent: 9999px;
+  overflow: hidden;
+  visibility: hidden;
 }
