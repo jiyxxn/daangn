@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:url" content="https://jiyxxn.github.io/daangn/index.html">
+  <meta property="og:title" content="당근마켓">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://github.com/jiyxxn/daangn/blob/main/images/index/source/images/main_image_04.png?raw=true">
+  <meta property="og:description" content="당근마켓 포트폴리오">
+  <link rel="icon" type="image/png" href="images/index/source/icon/meta.png">
   <link rel="stylesheet" href="css/index.css">
-  <script src="js/main.js"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script defer src="js/main.js"></script>
   <title>당근마켓</title>
 </head>
 <body>
@@ -50,126 +53,75 @@
     <div class="header_inner2">
       <!-- 중고거래 카테고리 전체 -->
       <div class="category_menu">
+        <!-- 수정시작 -->
         <a href="#" class="category_title">중고거래 카테고리</a>
-        <!-- menu_wrap에 on붙으면 하위메뉴 풀다운-->
+        <!-- menu_wrap에 on붙으면 하위메뉴 풀다운 -->
         <div class="menu_wrap">
           <ul>
             <li class="menu_title title_top"><a href="#">인기매물</a></li>
             <!-- // 인기매물 -->
 
-            <div>
-              <li class="menu_title title_life">
-                <a href="#">라이프
-                  <img src="images/index/source/icon/btn_arrow_menu.png" alt="arrow"/></a>
-              </li>
-            </div>
-            <div class="slide_menu">
-              <ul class="cont_life">
-                <div class="menu_p">
-                  <li><a href="#">생활가전</a></li>
-                  <li><a href="#">생활/주방</a></li>
-                  <li><a href="#">가구/인테리어</a></li>
-                  <li><a href="#">유아동</a></li>
-                  <li><a href="#">가공식품</a></li>
-                </div>
-                <div class="menu_p">
-                  <li><a href="#">스포츠/레저</a></li>
-                  <li><a href="#">티켓/교환권</a></li>
-                  <li><a href="#">도서</a></li>
-                  <li><a href="#">기타 중고물품</a></li>
-                </div>
+            <li class="menu_title title_life"><a href="#">라이프</a>
+              <ul class="slide_menu cont_life">
+                <li class="menu_p"><a href="#">생활가전</a></li>
+                <li class="menu_p"><a href="#">스포츠/레저</a></li>
+                <li class="menu_p"><a href="#">생활/주방</a></li>
+                <li class="menu_p"><a href="#">티켓/교환권</a></li>
+                <li class="menu_p"><a href="#">가구/인테리어</a></li>
+                <li class="menu_p"><a href="#">도서</a></li>
+                <li class="menu_p"><a href="#">유아동</a></li>
+                <li class="menu_p"><a href="#">기타 중고물품</a></li>
+                <li class="menu_p"><a href="#">가공식품</a></li>
               </ul>
-            </div>
+            </li>
             <!-- // 라이프 -->
 
-            <div>
-              <li class="menu_title title_digital">
-                <a href="#">디지털/핸드폰
-                  <img src="images/index/source/icon/btn_arrow_menu.png" alt="arrow"/></a>
-              </li>
-            </div>
-            <div class="slide_menu">
-              <ul class="cont_digital">
-                <div class="menu_p">
-                  <li><a href="#">디지털 기기</a></li>
-                  <li><a href="#">생활/주방</a></li>
-                  <li><a href="#">기타 중고물품</a></li>
-                </div>
-                <div class="menu_p">
-                  <li><a href="#">취미/게임/음반</a></li>
-                  <li><a href="#">유아동</a></li>
-                  <li><a href="#">유아도서</a></li>
-                </div>
+            <li class="menu_title title_digital"><a href="#">디지털/핸드폰</a>
+              <ul class="slide_menu cont_digital">
+                <li class="menu_p"><a href="#">디지털 기기</a></li>
+                <li class="menu_p"><a href="#">취미/게임/음반</a></li>
+                <li class="menu_p"><a href="#">생활/주방</a></li>
+                <li class="menu_p"><a href="#">유아동</a></li>
+                <li class="menu_p"><a href="#">기타 중고물품</a></li>
+                <li class="menu_p"><a href="#">유아도서</a></li>
               </ul>
-            </div>
+            </li>
             <!-- // 디지털/핸드폰 -->
 
-            <div>
-              <li class="menu_title title_fathion">
-                <a href="#">패션
-                  <img src="images/index/source/icon/btn_arrow_menu.png" alt="arrow"/></a>
-              </li>
-            </div>
-            <div class="slide_menu">
-              <ul class="cont_fashion">
-                <div class="menu_p">
-                  <li><a href="#">여성패션</a></li>
-                  <li><a href="#">여성잡화</a></li>
-                  <li><a href="#">기타 중고물품</a></li>
-                </div>
-                <div class="menu_p">
-                  <li><a href="#">남성패션/잡화</a></li>
-                  <li><a href="#">유아동</a></li>
-                </div>
+            <li class="menu_title title_fashion"><a href="#">패션</a>
+              <ul class="slide_menu cont_fashion">
+                <li class="menu_p"><a href="#">여성패션</a></li>
+                <li class="menu_p"><a href="#">남성패션/잡화</a></li>
+                <li class="menu_p"><a href="#">여성잡화</a></li>
+                <li class="menu_p"><a href="#">유아동</a></li>
+                <li class="menu_p"><a href="#">기타 중고물품</a></li>
               </ul>
-            </div>
+            </li>
             <!-- // 패션 -->
 
-            <li class="menu_title title_beauty">
-              <a href="#">뷰티/미용</a>
-            </li>
+            <li class="menu_title title_beauty"><a href="#">뷰티/미용</a></li>
             <!-- // 뷰티/미용 -->
 
-            <div>
-              <li class="menu_title title_pet">
-                <a href="#">반려용품
-                  <img src="images/index/source/icon/btn_arrow_menu.png" alt="arrow"/></a>
-              </li>
-            </div>
-            <div class="slide_menu">
-              <ul class="cont_pet">
-                <div class="menu_p_pet">
-                  <li><a href="#">반려동물용품</a></li>
-                </div>
-                <div class="menu_p">
-                  <li><a href="#">식물</a></li>
-                </div>
+            <li class="menu_title title_pet"><a href="#">반려용품</a>
+              <ul class="slide_menu cont_pet">
+                <li class="menu_p"><a href="#">반려동물용품</a></li>
+                <li class="menu_p"><a href="#">식물</a></li>
               </ul>
-            </div>
+            </li>
             <!-- // 반려용품 -->
 
-            <div>
-              <li class="menu_title title_car">
-                <a href="#">부동산/자동차
-                  <img src="images/index/source/icon/btn_arrow_menu.png" alt="arrow"/></a>
-              </li>
-            </div>
-            <div class="slide_menu">
-              <ul class="cont_car">
-                <div class="menu_p">
-                  <li><a href="#">삽니다</a></li>
-                  <li><a href="#">부동산</a></li>
-                </div>
-                <div class="menu_p">
-                  <li><a href="#">중고차</a></li>
-                </div>
+            <li class="menu_title title_car"><a href="#">부동산/자동차</a>
+              <ul class="slide_menu cont_car">
+                <li class="menu_p"><a href="#">삽니다</a></li>
+                <li class="menu_p"><a href="#">부동산</a></li>
+                <li class="menu_p"><a href="#">부동산</a></li>
               </ul>
-            </div>
+            </li>
             <!-- // 부동산/자동차 -->
+            <!-- 수정끝 -->
           </ul>
-          <!-- 하위메뉴 감싼 ul -->
         </div>
-        <!-- // 중고거래 카테고리 -->
+
         <!-- 클릭시 변경될 좌측 화살표 -->
         <a href="#" class="btn_left_arrow"></a>
       </div>
@@ -200,8 +152,8 @@
   </header>
   <!-- // header -->
 
-  <!-- 메인배너 -->
-  <main id="banner">
+  <!-- 배너 section -->
+  <div id="banner">
     <h2 class="blind">이미지 슬라이드</h2>
     <!-- banner_frame (배너 기차) -->
     <div class="banner_wrap">
@@ -365,8 +317,9 @@
         </section>
         <!-- // 1번 슬라이드 -->
       </div>
+      <!-- // banner_frame -->
     </div>
-    <!-- // 메인배너 -->
+    <!-- //banner_wrap -->
 
     <!-- 배너 arrow -->
     <div class="arrow">
@@ -391,6 +344,8 @@
       </ul>
     </div>
     <!-- // 배너 arrow -->
+  </div>
+  <!-- // #banner 메인배너 -->
   
   <main id="container">
     <section class="contents">
@@ -720,10 +675,196 @@
       </article>
     </section>
     <!-- //secion.contents -->
+    <!-- 당근페이 메인 이미지 -->
+    <section>
+      <article class="pay-main-img">
+        <img src="./images/index/source/images/dangeunpay_mainimage.png" width=100% alt="당근페이 소게 이미지">
+      </article>
+    </section>
+    <!-- //당근페이 메인 이미지 -->
+    <!-- 당근페이 상세 화면 -->
+    <section>
+      <article class="pay-detail-img">
+        <div class="pay-detail-inner">
+          <!-- 당근페이 캐러셀 이미지 -->
+          <ul class="product-carousel">
+            <li class="item1"><img src="./images/index/source/images/dangeunpay1.png" width="100%" alt="당근페이 송금하기 이미지"></li>
+            <li class="item2"><img src="./images/index/source/images/dangeunpay2.png" width="100%" alt="당근페이 송금하기 이미지"></li>
+            <li class="item3"><img src="./images/index/source/images/dangeunpay3.png" width="100%" alt="당근페이 송금하기 이미지"></li>
+            <li class="item4"><img src="./images/index/source/images/dangeunpay4.png" width="100%" alt="당근페이 송금하기 이미지"></li>
+          </ul>
+          <!-- 캐러셀 방향키 -->
+          <div class="product-carousel-nav">
+            <button class="carousel-nav prev"></button>
+            <button class="carousel-nav next"></button>
+          </div>
+          <!-- 당근페이 텍스트 -->
+          <div class="pay-detail-txt">
+            <p class="pay-title">채팅창에서 <span>바로 송금</span></p>
+            <p class="pay-subtitle">채팅창 상단 송금하기 버튼 또는 <br>
+                하단의 송금 버튼을 눌러<br>
+                중고거래중인 이웃에게 바로 송금해요
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- //당근페이 상세 화면 -->
+
+    <!-- 자주 묻는 질문 -->
+    <section>
+      <article class="faq">
+        <div class="faq-main-txt">자주 묻는 질문</div>
+        <div class="accordion-wrap">
+          <!-- 첫번째 질문 -->
+          <div class="que">
+            <span>동일한 게시글을 올려서 내 게시글이 미노출 됐어요</span>
+            <div class="arrow-wrap">
+              <span class="arrow-plus">+</span>
+            </div>
+          </div>
+          <div class="anw">
+            <p>15회의 끌어올리기 횟수를 채우지 않고 동일한 게시글을 여러 번 작성하면 홈 화면에 노출되지 않아요.<br>
+              (숨김 또는 삭제 후 게시글을 작성했더라도 동일한 게시글을 여러 번 작성했다면 중복 게시글로 분류되어 미노출 됩니다.)<br>
+              <br>
+              미노출 처리된 게시글을 다시 노출하는 방법을 안내해 드릴게요.<br>
+              <br>
+              1. 제일 처음 작성한 게시글을 찾아서 끌어올리기 해주세요.<br>
+              1-1. 나머지 중복 게시글(숨김글 포함)의 상태를 [거래완료] 로 바꿔 주세요.<br>
+              <br>
+              2. 이미 제일 처음 작성한 게시글을 포함하여 나머지 중복 게시글을 1개라도 삭제했다면 모든 중복 게시글을 삭제해주세요.<br>
+              2-1. 7~10일이 지난 뒤 다시 작성 해주시길 바랍니다.<br>
+              <br>
+              게시글을 홈 화면에 노출하고 싶다면 새롭게 게시글을 작성하는 대신 기한을 지켜 끌어올리기 해주시길 바랍니다. 🙂
+            </p>
+          </div>
+          <!-- 두번째 질문 -->
+          <div class="que">
+            <span>동네인증이 안 돼요!</span>
+            <div class="arrow-wrap">
+              <span class="arrow-plus">+</span>
+            </div>
+          </div>
+          <div class="anw">
+            <p>동네인증을 하기 전에 현재 내 위치가 인증하려는 동네(접속하려는 동네)에 있는지 확인해주세요. <br>
+                  인증하려는 동네(접속하려는 동네)와 현재 내 위치가 다르다면 인증에 실패해요. 해당 동네에 있을 때 인증해주시길 바랄게요. 🙂<br>
+                  <br><br>
+                <span class="main-color">동네인증이 안 되는 경우</span>를 확인하고 싶다면, <span class="main-color pointer">여기</span>를 확인해 주세요
+            </p>
+          </div>
+          <!-- 세번째 질문 -->
+          <div class="que">
+            <span>당근페이는 어떻게 쓰나요?</span>
+            <div class="arrow-wrap">
+              <span class="arrow-plus">+</span>
+            </div>
+          </div>
+          <div class="anw">
+            <p class="qna-bold">당근페이 가입하기</p>
+            <ul>
+              <li>[나의당근] → [중고거래는 이제 당근페이로 해보세요!] 에서 가입하실 수 있어요.</li>
+              <li>당근페이는 1인당 1개의 계정만 생성할 수 있는 점 참고해 주세요.</li>
+            </ul>
+            <div class="qna-img-wrap">
+              <img src="./images/index/source/images/qna_img1.png" width="100%" alt="당근페이 가입하기">
+            </div>
+            <p class="qna-bold">당근머니 송금</p>
+            <ul>
+              <li>채팅창 상단 '송금하기' 버튼 또는 하단의 + 버튼 → '송금' 버튼을 눌러 거래 상대방에게 바로 송금하세요.</li>
+              <li>금액 확인 후 6자리 비밀번호만 입력하면 돼요.</li>
+              <li>한 번 보낸 송금은 취소할 수 없어요.</li>
+            </ul>
+            <div class="qna-img-wrap">
+              <img src="./images/index/source/images/qna_img2.png" width="100%" alt="당근머니 송금">
+            </div>
+            <p class="qna-bold">계좌송금</p>
+            <ul>
+              <li>[나의당근] 화면의 계좌송금 혹은 [당근페이 홈] 화면의 계좌송금 버튼을 눌러 계좌번호 송금을 할 수 있어요.</li>
+              <li>금액 확인 후 6자리 비밀번호만 입력하면 돼요.</li>
+              <li>한 번 보낸 송금은 취소할 수 없어요.</li>
+            </ul>
+            <div class="qna-img-wrap">
+              <img src="./images/index/source/images/qna_img3.png" width="100%" alt="계좌송금">
+            </div>
+            <p class="qna-bold">내 계좌로 송금</p>
+            <ul>
+              <li>당근머니 잔액은 언제든지 수수료 없이 내 계좌로 보낼 수 있어요.</li>
+              <li>내 계좌로 보내기 위해서는 내 은행 계좌를 당근페이에 등록하는 인증 과정이 필요해요.</li>
+            </ul>
+            <div class="qna-img-wrap">
+              <img src="./images/index/source/images/qna_img4.png" width="100%" alt="내 계좌로 송금">
+            </div>
+          </div>
+          <!-- 네번째 질문 -->
+          <div class="que">
+            <span>비즈프로필은 무엇인가요?</span>
+            <div class="arrow-wrap">
+              <span class="arrow-plus">+</span>
+            </div>
+          </div>
+          <div class="anw">
+            <p>비즈프로필이 궁금하다면, <span class="main-color pointer">여기</span>를 확인해 주세요.</p>
+          </div>
+        </div>
+        <div class="faq-button">문의하기</div>
+      </article>
+    </section>
+    <!-- 자주 묻는 질문 -->
+    
+    <!-- 푸터 상단 이미지 -->
+    <div class="foot-img-container">
+      <div class="foot-slogan">
+        <p>당신 근처에서 만나요</p>
+        <img src="./images/index/source/images/logo_main.png" width="100%" alt="당근 마켓 하단 로고">
+      </div>
+      <div class="foot-img">
+        <img src="images/index/source/images/footer_image.png" width="100%" alt="당근 마켓 푸터 이미지">
+      </div>
+    </div>    
   </main>
+  <!-- //container -->
+  <!-- footer -->
+  <footer>
+    <div class="foot-container">
+      <div class="foot_inner">
+        <div class="footer-left">
+          <div class="pay-logo">
+            <img src="images/index/source/images/danguenpay_logo.png" width="100%" alt="">
+          </div>
+          <address>
+              <span>대표 김용현, 황도연ㅣ사업자번호 375-8700088 </span><br>
+              <span>직업정보제공사업 신고번호 2016 - 서울서초 - 0051</span> <br>
+              <span>주소 서울특별시 구로구 디지털로 30길 28, 609호 (당근서비스)</span><br>
+              <span>전화 1544-9796ㅣ고객문의 cs@daangnservice.com</span>
+          </address>
+          <ul class="foot-txt">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">위치기반서비스 이용약관</a></li>
+            <li><a href="#">이용자보호 비전과 계획</a></li>
+          </ul>
+        </div>
+        <div class="footer-middle">당근마켓</div>
+        <div class="footer-right">
+          <div class="foot-txt">당근페이 고객센터 &nbsp; 1877-9735 <br>
+              운영시간 : 평일 10:00 - 19:00<br>
+              (점심시간 13:00 - 14:00)</div>
+          <div class="foot-txt">당근페이 금융피해신고 &nbsp; 1877-9734 <br>
+              운영시간 : 평일 10:00 - 익일 02:00 <br>
+              (점심시간 13:00 - 14:00)</div>
+          <ul class="foot-txt">
+            <li><a href="#">제휴 문의</a></li>
+            <li><a href="#">광고 문의</a></li>
+            <li><a href="#">PR 문의</a></li>
+            <li><a href="#">IR 문의</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
 </div>
 <!-- // wrap -->
-
 
 </body>
 </html>

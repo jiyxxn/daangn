@@ -3,19 +3,22 @@ document.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
-// 중고거래 카테고리 클릭
+// 중고거래 카테고리 클릭하면 하위메뉴 풀다운
 var categoryBtn = document.querySelector(".category_title");
+var menuWrap = document.querySelector(".menu_wrap");
 
-categoryBtn.addEventListener("click", function () {
-  var menuWrap = document.querySelector(".menu_wrap");
-  if (menuWrap.classList.contains("on")) {
-    menuWrap.style.maxHeight = "0px";
-  } else {
+let open = true
+categoryBtn.addEventListener("click", (e) => {
+  if(open){
     menuWrap.style.height = menuWrap.scrollHeight + "px";
+    categoryBtn.classList.add("on");
+    open = false
+  } else {
+    menuWrap.style.height = "0px";
+    categoryBtn.classList.remove("on");
+    open = true
   }
-  menuWrap.classList.toggle("on");
-  categoryBtn.classList.toggle("on");
-});
+})
 
 document.querySelectorAll(".slide_menu").forEach(function(menu) {
   menu.style.maxHeight = menu.scrollHeight + "px";
@@ -24,16 +27,15 @@ var menuTitles = document.querySelectorAll(".menu_title");
 
 menuTitles.forEach(function (menuTitle) {
   menuTitle.addEventListener("click", function () {
-    var ul = this.parentNode.nextElementSibling;
-    var slideMenu = document.querySelector(".slide_menu");
+    var ul = menuTitle.querySelector("ul.slide_menu");
+    // var slideMenu = document.querySelector(".slide_menu");
     // 다른 menu_title 요소들에게서 클래스를 제거
-    var allMenuTitles = document.querySelectorAll(".menu_title");
     if (ul.style.maxHeight){
       ul.style.maxHeight = null;
     } else {
       ul.style.maxHeight = ul.scrollHeight + "px";
     }
-    allMenuTitles.forEach(function (menuTitleElement) {
+    menuTitles.forEach(function (menuTitleElement) {
 
       if (menuTitleElement !== menuTitle) {
       }
@@ -44,9 +46,9 @@ menuTitles.forEach(function (menuTitle) {
     // 클릭한 ul 요소와 menu_title 요소에 클래스를 추가
     var ulToggled = ul.classList.toggle("active");
     if (ulToggled) {
-      menuWrap.style.height = `${menuWrap.scrollHeight - ul.scrollHeight}px`;
+      menuWrap.style.height = `${parseInt(menuWrap.style.height) - ul.scrollHeight}px`;
     } else {
-      menuWrap.style.height = `${menuWrap.scrollHeight + ul.scrollHeight}px`;
+      menuWrap.style.height = `${parseInt(menuWrap.style.height) + ul.scrollHeight}px`;
     }
 
     menuTitle.classList.toggle("active");
@@ -171,6 +173,10 @@ bannerFrame.addEventListener('transitionend', () => {
   }
 });
 
+
+
+
+
 //✅ 중고거래 인기매물 더보기 스크립트
 
 window.onload=function(){
@@ -191,3 +197,43 @@ window.onload=function(){
     // text_more_wrap의 css를 display : block으로 했더니 기존의 flex가 망가지는 논리구조가 발생함
   })
 }
+
+
+// faq
+$(".que").click(function(){
+  $(this).next(".anw").stop().slideToggle(400);
+  $(this).toggleClass("on").siblings().removeClass("on");
+  $(this).next(".anw").siblings(".anw").slideUp(400);
+})
+
+// 당근페이 캐러셀
+const $carousel_cells = $(".product-carousel>li");
+const $carousel_nav = $(".carousel-nav");
+let selected_product_index = 0;
+
+function selectProduct(index){
+  selected_product_index = index % $carousel_cells.length;
+
+  $carousel_cells.each(function(i){
+      let offset = i - selected_product_index;
+      if (offset < 0) offset += $carousel_cells.length;
+
+      let index;
+      for(index=0; index < $carousel_cells.length +1; index++) {
+          $(this).removeClass("item"+index).addClass("item"+(offset+1));
+      }
+  });
+}
+
+// 이미지 클릭 이벤트 
+$carousel_cells.click(function(){
+  selectProduct($(this).index());
+});
+
+// 방향키 클릭 이벤트 
+$carousel_nav.click(function(){
+  const delta = $(this).hasClass("prev") ? -1 : 1;
+  const delta_product = $(`.product-carousel > li:eq(${(selected_product_index+delta)%$carousel_cells.length})`);
+  const delta_product_index = parseInt(delta_product.index());
+  selectProduct(delta_product_index);
+});
