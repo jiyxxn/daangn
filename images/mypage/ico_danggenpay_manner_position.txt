@@ -1,0 +1,35 @@
+
+.bg-dollar_circle {
+    width: 17px; height: 16px;
+    background: url('css_sprites.png') -48px -62px;
+}
+
+.bg-coin {
+    width: 18px; height: 16px;
+    background: url('css_sprites.png') -10px -62px;
+}
+
+.bg-chat4 {
+    width: 17px; height: 16px;
+    background: url('css_sprites.png') -121px -10px;
+}
+
+.bg-heart {
+    width: 17px; height: 16px;
+    background: url('css_sprites.png') -121px -46px;
+}
+
+.bg-image_15 {
+    width: 91px; height: 32px;
+    background: url('css_sprites.png') -10px -10px;
+}
+
+x
+.bg-Smile {
+    width: 16px; height: 15px;
+    background: url('css_sprites.png') -85px -62px;
+}
+
+.bg-Vector_2 {
+    width: 8px; height: 12px;
+    
