@@ -133,6 +133,7 @@ height: 184px;
 background-color: #FFF0E5;
 border-radius: 20px;
 padding: 20px 24px;
+box-sizing:border-box;
 }
 div.content1 > div.manner_detail>h3{
   font-family: 'Pretendard-SemiBold';
@@ -158,4 +159,5 @@ height: 184px;
   background-color: #EAF7E4;
   border-radius: 20px;
   padding: 20px 24px;
+  box-sizing:border-box;
 }
