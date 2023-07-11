@@ -1,0 +1,627 @@
+@import url(reset.css);
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Light';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+  font-weight:400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+  font-weight:600;
+  font-style: normal;
+}
+
+
+
+/* common */
+body {
+  font-family: 'Pretendard-Regular';
+  font-weight: 400;
+  font-style: normal;
+  color: #191919;
+}
+
+div#wrap {
+  overflow: hidden;
+}
+
+a, a:focus {
+  text-decoration: none;
+  color: #333;
+}
+
+/* layout */
+div#container {
+  width: 1320px;
+  margin: 0 auto;
+  /* background: aqua; */
+}
+div#container::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+aside#aside {
+  width: 330px;
+  float: left;
+  background: #FAFAFA;
+}
+main#main {
+  width: 900px;
+  float: right;
+  /* background: aquamarine; */
+}
+
+/* aside 프로필 */
+div.profile {
+  width: 100%;
+  height: 351px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border-bottom: solid 4px #FF8A3D;
+}
+div.profile > img {
+  width: 217px;
+  height: 217px;
+  margin-top: 40px;
+  object-fit: cover;
+}
+div.profile > a {
+  margin-top: 27px;
+  width: 290px;
+  height: 45px;
+  line-height: 45px;
+  background: #FF8A3D;
+  color: #FEFEFE;
+  border-radius: 5px;
+  text-align: center;
+}
+
+aside#aside > ul {}
+aside#aside > ul > li {
+
+}
+aside#aside > ul > li > a {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 53px;
+  line-height: 53px;
+  border-bottom: solid 2px #ECECEC;
+  background: #fff;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+  /* padding-left: 57px; */
+}
+aside#aside > ul > li > a > span {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url(../images/mypage/ico_menu.png) no-repeat 0 0;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin-left: 19px;
+  margin-right: 10px;
+}
+aside#aside > ul > li:nth-child(1) > a > span {
+  background-position: -96px -10px;
+}
+aside#aside > ul > li:nth-child(2) > a > span {
+  background-position: -10px -10px;
+}
+aside#aside > ul > li:nth-child(3) > a > span {
+  background-position: -53px -53px;
+}
+aside#aside > ul > li:nth-child(4) > a > span {
+  background-position: -10px -53px;
+}
+aside#aside > ul > li:nth-child(5) > a > span {
+  background-position: -53px -10px;
+}
+aside#aside > ul > li > ul {
+  padding: 24px 57px;
+}
+aside#aside > ul > li > ul > li {}
+aside#aside > ul > li > ul > li > a {
+  display: block;
+  line-height: 30px;
+}
+aside#aside > ul > li > ul > li > a:hover, aside#aside > ul > li > ul > li > a:focus {
+  color: #FF8A3D;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+}
+/* 자물쇠 */
+aside#aside > ul > li > ul > li > a::after {
+  content:"";
+  display: block;
+  clear: both;
+}
+
+/* content1 */
+section.content1::after {
+  content:"";
+  display: block;
+  clear: both;
+}
+section.content1 > p {
+  font-size: 32px;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+section.content1 > div {
+  box-sizing: border-box;
+  width: 400px;
+  height: 184px;
+  border-radius: 20px;
+  padding: 20px;
+}
+section.content1 > div > h3 {
+  font-size: 25px;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+}
+section.content1 > div.mnDegree {
+  position: relative;
+  float: left;
+  margin-left: 20px;
+  background: #FFF0E5;
+}
+section.content1 > div.mnDegree > ul.degree {
+  position: relative;
+  margin-top: 10px;
+  width: 346px;
+  height: 43px;
+}
+/* section.content1 > div.mnDegree > ul.degree::after {
+  content: "";
+  clear: both;
+  display: block;
+} */
+section.content1 > div.mnDegree > ul.degree > li {}
+/* 온도바 */
+section.content1 > div.mnDegree > ul.degree > li:first-child, section.content1 > div.mnDegree > ul.degree > li:nth-child(2) {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  border-radius: 100px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #fff;
+}
+section.content1 > div.mnDegree > ul.degree > li:first-child {
+  z-index: 30;
+}
+section.content1 > div.mnDegree > ul.degree > li:nth-child(2) {
+  z-index: 35;
+  width: 152px;
+  background: #FF8A3D;
+}
+section.content1 > div.mnDegree > ul.degree > li:nth-child(3) {
+  position: absolute;
+  font-size: 12px;
+  color: #727272;
+  left: 110px;
+  top: 3px;
+}
+section.content1 > div.mnDegree > ul.degree > li:nth-child(3) > span:last-child::after {
+  content: "";
+  display: block;
+  position: absolute;
+  clear: both;
+  width: 7px;
+  height: 4px;
+  background: url(../images/mypage/Polygon.png) no-repeat 0 0;
+  top: 17px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.content1 > div.mnDegree > ul.degree > li:nth-child(4) {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+section.content1 > div.mnDegree > ul.degree > li:nth-child(4) > span {
+  display: block;
+  width: 16px;
+  height: 15px;
+  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -85px -62px;
+  text-indent: -9999px;
+  margin-left: 5px;
+  overflow: hidden;
+  color: #3C3B3B;
+}
+section.content1 > div.mnDegree > ul.rate {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+}
+section.content1 > div.mnDegree > ul.rate > li {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 120px;
+  margin-left: 40px;
+}
+section.content1 > div.mnDegree > ul.rate > li::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 12px;
+  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -122px -11px;
+  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -122px -48px;
+  position: absolute;
+  left: -18px;
+  top: 3px;
+}
+section.content1 > div.mnDegree > ul.rate > li:last-child::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -122px -11px;
+  top: 2px;
+}
+section.content1 > div.mnDegree > ul.rate > li > span {
+  font-size: 10px;
+  margin-top: 3px;
+  color: #727272;
+}
+section.content1 > div.mnDegree > span {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+}
+section.content1 > div.mnDegree > span::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -10px -98px;
+  margin-left: 5px;
+}
+section.content1 > div.daangnPay {
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  background: #EAF7E4;
+}
+section.content1 > div.daangnPay > h3 {
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 90px;
+  height: 32px;
+  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -10px -10px;
+}
+section.content1 > div.daangnPay > p {
+  font-size: 12px;
+  color : #727272;
+  margin-top: 7px;
+}
+section.content1 > div.daangnPay > p:nth-of-type(2) {
+  font-size: 25px;
+  color: #191919;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+}
+section.content1 > div.daangnPay > p:nth-of-type(2) > span {
+  font-size: 18px;
+}
+section.content1 > div.daangnPay > ul {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+section.content1 > div.daangnPay > ul > li {
+  text-align: center;
+}
+section.content1 > div.daangnPay > ul > li > a {
+  position: relative;
+  display: block;
+  width: 165px;
+  height: 37px;
+  background: #fff;
+  border-radius: 5px;
+  line-height: 37px;
+  font-size: 14px;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+}
+section.content1 > div.daangnPay > ul > li > a::before {
+  content:"";
+  display: inline-block;
+  width: 12px;
+  height: 14px;
+  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -13px -63px;
+  margin-right: 3px;
+  vertical-align: text-top;
+}
+section.content1 > div.daangnPay > ul > li:last-child > a::before {
+  width: 15px;
+  height: 14px;
+  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -49px -63px;
+
+}
+section.content1 > div.daangnPay > span {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+}
+section.content1 > div.daangnPay > span::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -10px -98px;
+  margin-left: 5px;
+}
+/* content2 */
+section.content2 {
+  margin-top: 70px;
+}
+
+section.content2 > h2 {
+  font-size: 32px;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+section.content2 > article.sales {
+  position: relative;
+  height: 600px;
+  /* 요소들이 absolute라서 height 정해줌 */
+}
+section.content2 > article.sales > h3 {
+  font-size: 24px;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+section.content2 > article.sales > ul:first-of-type {
+  display: flex;
+}
+section.content2 > article.sales > ul:first-of-type > li > a {
+  display: block;
+  box-sizing: border-box;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 15px;
+  z-index: 40;
+}
+section.content2 > article.sales > ul:first-of-type > li.active > a{
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+  border-bottom: solid 2px #FF8A3D;
+}
+
+section.content2 > article.sales > ul.box {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 89px;
+  width: 880px;
+  height: 419px;
+  background: #FAFAFA;
+  z-index: 1;
+  overflow: hidden;
+}
+section.content2 > article.sales > ul.box > li {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 48px 20px 0 20px;
+  line-height: 1;
+}
+section.content2 > article.sales > ul.box > li > a img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+section.content2 > article.sales > ul.box > li > a > p {
+  font-size: 13px;
+  margin-top: 5px;
+}
+section.content2 > article.sales > ul.box > li > a > p:last-of-type {
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+}
+section.content2 > article.sales > ul.box > li > a > p:last-of-type > span {
+  font-size: 10px;
+  margin-left: 2px;
+}
+section.content2 > article.sales > ul.box > li > span {
+  font-size: 10px;
+  margin-top: 5px;
+}
+section.content2 > article.sales > ul.box > li > span:last-of-type {
+  color: #777777;
+}
+section.content2 > article.sales > ul.box.active {
+  visibility: visible;
+}
+section.content2 > article.buy> h3 {
+  font-size: 24px;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+section.content2 > article.buy > ul {
+  position: relative;
+  width: 880px;
+  height: 419px;
+  background: #FAFAFA;
+  z-index: 1;
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+section.content2 > article.buy > ul > li {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color :#838383;
+}
+
+section.content2 > article.budget {}
+section.content2 > article.budget > h3 {
+  font-size: 24px;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+section.content2 > article.budget > div {
+  position: relative;
+  width: 880px;
+  box-sizing: border-box;
+  border: solid 1px #d9d9d9;
+  border-radius: 5px;
+  padding: 37px 48px 16px 48px;
+}
+section.content2 > article.budget > div > p:first-child {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ff8a3d;
+  font-size: 32px;
+  text-align: center;
+  line-height: 120px;
+  color: #fff;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+  top: 37px;
+  right: 46px
+}
+section.content2 > article.budget > div > h4 {
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+  font-size: 32px;
+  
+}
+section.content2 > article.budget > div > p:nth-of-type(2) {
+  font-size: 15px;
+  color: #838383;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+section.content2 > article.budget > div > dl {
+  width: 100%;
+  border-bottom: solid 1px #d9d9d9;
+}
+section.content2 > article.budget > div > dl > dt {
+  font-size: 20px;
+}
+section.content2 > article.budget > div > dl > dd {
+  font-size: 32px;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+section.content2 > article.budget > div > p:last-of-type {
+  text-align: center;
+  padding: 35px 0 20px 0;
+  color : #838383;
+  font-size: 15px;
+}
+
+section.content2 > div.banner {
+  position: relative;
+  width: 100%;
+  height: 151px;
+  background: #FDF6EC url(../images/mypage/ico_mini_banner.png) no-repeat 10% 0;
+  padding-left: 48px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+section.content2 > div.banner > p {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  position: absolute;
+  left: 240px;
+  top: 48px;
+}
+section.content2 > div.banner > p > span:first-child {
+  font-size: 24px;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+}
+section.content2 > div.banner > p > span {
+  font-size: 20px;
+}
+section.content2 > div.banner > span > a {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  display: block;
+  width: 198px;
+  height: 50px;
+  background: #ff8a3d;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  transform: translateY(-50%);
+}
+div.fullBanner {
+  position: relative;
+  width: 1920px;
+  /* background: pink; */
+}
+div.fullBanner > img {
+  width: 100%;
+  z-index: 1;
+}
+div.fullBanner > p:nth-child(2) {
+  position: absolute;
+  top: 110px;
+  left: 320px;
+  font-size: 36px;
+  font-family: 'Pretendard-SemiBold';
+  font-weight: 600;
+}
+div.fullBanner > p:last-child {
+  position: absolute;
+  top: 220px;
+  left: 320px;
+  font-size: 24px;
+}
