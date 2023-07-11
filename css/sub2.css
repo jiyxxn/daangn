@@ -41,6 +41,13 @@ a {
   font-style: normal;
 }
 
+#container {
+  width: 1320px;
+  height: 2277px;
+  margin: 0 auto;
+  border: 1px solid #333;
+}
+
 /* 네비게이션 */
 /* 프로필 */
 #nav {
@@ -56,6 +63,7 @@ a {
   height: 217px;
   margin: 0 auto;
   background:  url(../images/mypage/img_profile.png);
+  background-size: cover;
   text-indent: -9999px;
 }
 #nav>a {
@@ -212,4 +220,12 @@ a {
 }
 
 /* footer */
-#footer {}
+#footer {
+  display: inline-block;
+  width: 1920px;
+}
+#footer>.foot_img {
+  height: 360px;
+  background: red url(../images/mypage/main_banner_img.jpg) no-repeat 0 0;
+  background-size: cover;
+}
