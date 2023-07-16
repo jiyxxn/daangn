@@ -902,7 +902,7 @@ article.pay-detail-img {
           filter: blur(3px);
         }
         .product-carousel > li.item2{
-          z-index: 2;
+          z-index: 0;
           transform: translateX(-50%) translateY(100px) scale(0.7) translate3d(-80%,-31%,0);
           filter: blur(3px);
         }
@@ -945,6 +945,7 @@ article.pay-detail-img {
         p.pay-title{
           position: relative;
           font-size: 30pt;
+          line-height: 1.8;
           font-family: 'GmarketSansBold';
         }
           p.pay-title > span {
@@ -1043,7 +1044,7 @@ article.pay-detail-img {
           div.anw img {
             border-radius: 25px;
           }
-        div.faq-button{
+        a.faq-button{
           float: right;
           width: 140px;
           height: 65px;
@@ -1065,17 +1066,11 @@ article.pay-detail-img {
     }
       div.foot-slogan {
         display: flex;
-        flex-flow: row nowrap;
         align-items: center;
         justify-content: center;
+        column-gap: 120px;
         height: 350px;
       }
-        div.foot-slogan > p {
-          font-family: 'GmarketSansBold'; 
-          font-size: 35pt;
-          color: #FF8A3D;
-          margin-right: 130px ;
-        }
         div.foot-slogan > img{
           width: 424px;
           height: 119px;
