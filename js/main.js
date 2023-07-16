@@ -212,15 +212,14 @@ const $carousel_nav = $(".carousel-nav");
 let selected_product_index = 0;
 
 function selectProduct(index){
-  selected_product_index = index % $carousel_cells.length;
+  selected_product_index = index;
 
   $carousel_cells.each(function(i){
       let offset = i - selected_product_index;
       if (offset < 0) offset += $carousel_cells.length;
 
-      let index;
-      for(index=0; index < $carousel_cells.length +1; index++) {
-          $(this).removeClass("item"+index).addClass("item"+(offset+1));
+      for(let num=1; num <= $carousel_cells.length; num++) {
+          $(this).removeClass("item"+num).addClass("item"+(offset+1));
       }
   });
 }
