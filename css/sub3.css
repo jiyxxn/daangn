@@ -33,6 +33,18 @@
   font-weight:600;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Pretendard-Bold'; 
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-ExtraBold'; 
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 
@@ -107,28 +119,35 @@ aside#aside > ul > li {
 
 }
 aside#aside > ul > li > a {
-  display: flex;
-  align-items: center;
+  display: block;
+  /* align-items: center; */
   box-sizing: border-box;
   width: 100%;
   height: 53px;
   line-height: 53px;
   border-bottom: solid 2px #ECECEC;
-  background: #fff;
+
   font-family: 'Pretendard-SemiBold';
   font-weight: 600;
+  padding-left: 50px;
   /* padding-left: 57px; */
 }
-aside#aside > ul > li > a > span {
-  display: inline-block;
-  width: 23px;
-  height: 23px;
-  background: url(../images/mypage/ico_menu.png) no-repeat 0 0;
-  text-indent: -9999px;
-  overflow: hidden;
-  margin-left: 19px;
-  margin-right: 10px;
+aside#aside > ul > li:first-of-type > a {
+  background: #fff url(../images/mypage/icon/ico_menu.svg) no-repeat 6% 50%;
 }
+aside#aside > ul > li:nth-of-type(2) > a {
+  background: #fff url(../images/mypage/icon/ico_menu_02.svg) no-repeat 6% 50%;
+}
+aside#aside > ul > li:nth-of-type(3) > a {
+  background: #fff url(../images/mypage/icon/ico_menu_03.svg) no-repeat 6% 50%;
+}
+aside#aside > ul > li:nth-of-type(4) > a {
+  background: #fff url(../images/mypage/icon/ico_menu_04.svg) no-repeat 6% 50%;
+}
+aside#aside > ul > li:nth-of-type(5) > a {
+  background: #fff url(../images/mypage/icon/ico_menu_05.svg) no-repeat 6% 50%;
+}
+
 aside#aside > ul > li:nth-child(1) > a > span {
   background-position: -96px -10px;
 }
@@ -240,7 +259,7 @@ section.content1 > div.mnDegree > ul.degree > li:nth-child(3) > span:last-child:
   clear: both;
   width: 7px;
   height: 4px;
-  background: url(../images/mypage/Polygon.png) no-repeat 0 0;
+  background: url(../images/mypage/icon/ico_triangle.png) no-repeat 0 0;
   top: 17px;
   left: 50%;
   transform: translateX(-50%);
@@ -257,7 +276,7 @@ section.content1 > div.mnDegree > ul.degree > li:nth-child(4) > span {
   display: block;
   width: 16px;
   height: 15px;
-  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -85px -62px;
+  background: url(../images/mypage/icon/ico_smile.svg) no-repeat 0 0;
   text-indent: -9999px;
   margin-left: 5px;
   overflow: hidden;
@@ -278,20 +297,19 @@ section.content1 > div.mnDegree > ul.rate > li {
 section.content1 > div.mnDegree > ul.rate > li::before {
   content: "";
   display: inline-block;
-  width: 14px;
-  height: 12px;
-  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -122px -11px;
-  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -122px -48px;
+  width: 15px;
+  height: 15px;
+  background: url(../images/mypage/icon/ico_heart.svg) no-repeat 0 -1.5px;
   position: absolute;
-  left: -18px;
+  left: -20px;
   top: 3px;
 }
 section.content1 > div.mnDegree > ul.rate > li:last-child::before {
   content: "";
   display: inline-block;
-  width: 15px;
+  width: 16px;
   height: 15px;
-  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -122px -11px;
+  background: url(../images/mypage/icon/ico_chat.svg) no-repeat 0 0;
   top: 2px;
 }
 section.content1 > div.mnDegree > ul.rate > li > span {
@@ -303,15 +321,10 @@ section.content1 > div.mnDegree > span {
   position: absolute;
   top: 25px;
   right: 35px;
+  padding-right: 12px;
+  background: url(../images/mypage/icon/ico_arrow_right.svg) no-repeat 99% 48%;
 }
-section.content1 > div.mnDegree > span::after {
-  content: "";
-  display: inline-block;
-  width: 7px;
-  height: 12px;
-  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -10px -98px;
-  margin-left: 5px;
-}
+
 section.content1 > div.daangnPay {
   position: relative;
   float: right;
@@ -323,7 +336,8 @@ section.content1 > div.daangnPay > h3 {
   overflow: hidden;
   width: 90px;
   height: 32px;
-  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -10px -10px;
+  /* 이미지 실종 */
+  background: url() no-repeat -10px -10px;
 }
 section.content1 > div.daangnPay > p {
   font-size: 12px;
@@ -362,31 +376,26 @@ section.content1 > div.daangnPay > ul > li > a {
 section.content1 > div.daangnPay > ul > li > a::before {
   content:"";
   display: inline-block;
-  width: 12px;
-  height: 14px;
-  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -13px -63px;
+  width: 15px;
+  height: 15px;
+  background: url(../images/mypage/icon/ico_coin.svg) no-repeat 0 0;
   margin-right: 3px;
   vertical-align: text-top;
 }
 section.content1 > div.daangnPay > ul > li:last-child > a::before {
-  width: 15px;
-  height: 14px;
-  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -49px -63px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/mypage/icon/ico_dollar.svg) no-repeat 0 0;
 
 }
 section.content1 > div.daangnPay > span {
   position: absolute;
   top: 25px;
   right: 35px;
+  padding-right: 12px;
+  background: url(../images/mypage/icon/ico_arrow_right.svg) no-repeat 99% 48%;
 }
-section.content1 > div.daangnPay > span::after {
-  content: "";
-  display: inline-block;
-  width: 7px;
-  height: 12px;
-  background: url(../images/mypage/ico_danggenpay_manner.png) no-repeat -10px -98px;
-  margin-left: 5px;
-}
+
 /* content2 */
 section.content2 {
   margin-top: 70px;
@@ -394,8 +403,8 @@ section.content2 {
 
 section.content2 > h2 {
   font-size: 32px;
-  font-family: 'Pretendard-SemiBold';
-  font-weight: 600;
+  font-family: 'Pretendard-ExtraBold'; 
+  font-weight: 400;
   margin-bottom: 30px;
 }
 section.content2 > article.sales {
@@ -503,7 +512,7 @@ section.content2 > article.buy > ul > li {
 section.content2 > article.budget {}
 section.content2 > article.budget > h3 {
   font-size: 24px;
-  font-family: 'Pretendard-SemiBold';
+  font-family: 'Pretendard-Bold'; 
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -566,7 +575,7 @@ section.content2 > div.banner {
   position: relative;
   width: 100%;
   height: 151px;
-  background: #FDF6EC url(../images/mypage/ico_mini_banner.png) no-repeat 10% 0;
+  background: #FDF6EC url(../images/mypage/images/ico_mini_banner.png) no-repeat 10% 0;
   padding-left: 48px;
   box-sizing: border-box;
   margin-bottom: 100px;
