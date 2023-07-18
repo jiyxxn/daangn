@@ -60,7 +60,6 @@ var paginationItems = document.querySelectorAll(".banner_roll li");
 var bannerRollLinks = document.querySelectorAll(".banner_roll a");
 var bannerRoll = document.querySelector(".banner_roll");
 
-// 
 var prevIndex = 0;
 var currentIndex = 1;
 var pageIndex = 1;
@@ -151,8 +150,9 @@ for (var j = 0; j < bannerRollLinks.length; j++) {
 updatePagination(pageIndex);
 updateSlide();
 
+// transition 끝날때마다 실행되는 이벤트
 bannerFrame.addEventListener('transitionend', () => {
-  // 4번배너의 복제 슬라이드가 보이면
+  //4번배너의 복제 슬라이드가 보이면
   if (bannerItems[currentIndex].id === 'firstClone') {
       bannerFrame.style.transition = "none";
       currentIndex = 1;
