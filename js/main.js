@@ -227,6 +227,6 @@ $carousel_cells.click(function(){
 $carousel_nav.click(function(){
   const delta = $(this).hasClass("prev") ? -1 : 1;
   const delta_product = $(`.product-carousel > li:eq(${(selected_product_index+delta)%$carousel_cells.length})`);
-  const delta_product_index = parseInt(delta_product.index());
+  const delta_product_index =delta_product.index();
   selectProduct(delta_product_index);
 });
