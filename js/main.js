@@ -20,6 +20,7 @@ categoryBtn.addEventListener("click", (e) => {
   }
 })
 
+// 하위메뉴 클릭 이벤트
 document.querySelectorAll(".slide_menu").forEach(function(menu) {
   menu.style.maxHeight = menu.scrollHeight + "px";
 })
