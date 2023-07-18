@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>당근마켓 | 나의당근</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>당근마켓 | 나의당근</title>
 
-  <!-- css -->
-  <link rel="stylesheet" href="css/sub2.css">
+<!-- css -->
+<link rel="stylesheet" href="css/sub2.css">
 
-  <!-- script -->
+<!-- script -->
+<script defer src="js/sub2.js"></script>
 
 </head>
 <body>
@@ -64,12 +65,47 @@
       <h2>김바니님</h2>
       <div class="content1">
         <div class="manner">
-          <h3></h3>
-          <div class="temp_bar">
-            
+          <div class="manner_top">
+            <h3>매너온도</h3>
+            <span><a href="#">자세히 보기</a></span>
+          </div>
+          <div class="manner_middle">
+            <p>첫 온도 36.5℃</p>
+            <p>36.5℃</p>
+          </div>
+          <div class="temp_bar">온도 그래프</div>
+          <ul>
+            <li>재거래희망률 -&#37;
+              <ul>
+                <li>표시될 만큼 충분히 거래하지<br />
+                  않았어요.</li>
+              </ul>
+            </li>
+            <li>응답률 -&#37;
+              <ul>
+                <li>표시될 만큼 충분히 거래하지<br />
+                  않았어요.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- // 매너온도 -->
+
+        <div class="pay">
+          <div class="pay_top">
+            <div class="pay_logo">당근페이</div>
+            <a href="#">자세히 보기</a>
+          </div>
+          <ul>
+            <li>당근하는 새로운 방법, 당근페이!</li>
+            <li>120,000 <span>원</span></li>
+          </ul>
+          <div class="pay_bottom">
+            <a href="#">충전하기</a>
+            <a href="#">계좌송금</a>
           </div>
         </div>
-        <div class="pay"></div>
+        <!-- // 당근페이 -->
       </div>
     </section> 
     <!-- // section1 -->
@@ -85,15 +121,93 @@
           <li><a href="#">거래완료</a></li>
           <li><a href="#">숨김</a></li>
         </ul>
-        <a href="#">더보기</a>
+          <div class="sales_cont">
+            <ul class="slides">
+              <!-- 첫번째 상품 -->
+              <li>
+                <img src="/images/mypage/images/pro_img_01.jpeg" alt="첫번째 상품 이미지" width="200">
+                <a href="#">아이폰 13pro 256 시에라블루</a>
+                <ul>
+                  <li>990,000 <span>원</span></li>
+                  <li>서울 마포구 공덕동</li> 
+                  <li>관심 4 ∙ 채팅 31</li>
+                </ul>
+              </li>
+              <!-- // 첫번째 상품 -->
+
+              <!-- 두번째 상품 -->
+              <li>
+                <img src="/images/mypage/images/pro_img_02.jpeg" alt="두번째 상품 이미지" width="200">
+                <a href="#">어머니 들기름</a>
+                <ul>
+                  <li>20,000 <span>원</span></li>
+                  <li>서울 노원구 공릉동</li> 
+                  <li>관심 10 ∙ 채팅 14</li>
+                </ul>
+              </li>
+              <!-- // 두번째 상품 -->
+
+              <!-- 세번째 상품 -->
+              <li>
+                <img src="/images/mypage/images/pro_img_03.jpeg" alt="세번째 상품 이미지" width="200">
+                <a href="#">스텐찬통</a>
+                <ul>
+                  <li>10,000 <span>원</span></li>
+                  <li>대구 수성구 만촌2동</li> 
+                  <li>관심 15 ∙ 채팅 32</li>
+                </ul>
+              </li>
+              <!-- // 세번째 상품 -->
+
+              <!-- 네번째 상품 -->
+              <li>
+                <img src="/images/mypage/images/pro_img_04.jpeg" alt="네번째 상품 이미지" width="200">
+                <a href="#">파파야나인 미니 쿠퍼 푸쉬카</a>
+                <ul>
+                  <li>30,000 <span>원</span></li>
+                  <li>경기도 용인시 기흥구 서천동</li> 
+                  <li>관심 11 ∙ 채팅 28</li>
+                </ul>
+              </li>
+              <!-- // 네번째 상품 -->
+
+              <!-- 다섯번째 상품 -->
+              <li>
+                <img src="/images/mypage/images/pro_img_05.jpeg" alt="다섯번째 상품 이미지" width="200">
+                <a href="#">디올가방 반에반값으로 팔아요</a>
+                <ul>
+                  <li>600,000 <span>원</span></li>
+                  <li>부산 부산진구 부전제2동</li> 
+                  <li>관심 30 ∙ 채팅 5</li>
+                </ul>
+              </li>
+              <!-- // 다섯번째 상품 -->
+
+              <!-- 여섯번째 상품 -->
+              <li>
+                <img src="/images/mypage/images/pro_img_06.jpeg" alt="여섯번째 상품 이미지" width="200">
+                <a href="#">아임삭 충천 임팩트 드라이버 ...</a>
+                <ul>
+                  <li>20,000 <span>원</span></li>
+                  <li>인천 서구 경서동</li> 
+                  <li>관심 7 ∙ 채팅 8</li>
+                </ul>
+              </li>
+              <!-- // 여섯번째 상품 -->
+
+            </ul>
+            <a href="#"><span>더보기</span> +</a>
+          </div>
       </div>
       <!-- 판매내역 -->
 
       <!-- 구매내역 -->
       <div class="purchase">
         <h3>구매내역</h3>
-        <p>구매 내역이 없어요.<br />
-          동네 이웃과 따뜻한 거래를 해보세요.</p>
+        <div class="purchase_cont">
+          <p>구매 내역이 없어요.<br />
+            동네 이웃과 따뜻한 거래를 해보세요.</p>
+        </div>
       </div>
       <!-- // 구매내역 -->
 
@@ -103,7 +217,7 @@
           <div class="account_book_detail">
             <h4>김바니님의<br />가계부</h4>
             <p>더 이상 필요하지 않은 물건을 짐처럼 쌓아 두거나 버리지 말고,<br />
-              꼭 필요한 이웃을 찾아가도록 도와주세요!</p>
+              꼭 필요한 이웃이 찾아가도록 도와주세요!</p>
             <dl>
               <dt>5월 전체거래</dt>
               <dd>0원</dd>
@@ -115,25 +229,27 @@
       </div>
       <!-- // 중고거래 가계부 -->
 
-      <div class="banner">
-        <p><strong>가게를 운영하고 계신가요?</strong><br />
-        당근마켓에 등록하고 이웃에게 알려보세요!</p>
-      </div>
+    <!-- banner -->
+    <div class="banner">
+      <p><strong>가게를 운영하고 계신가요?</strong><br />
+      당근마켓에 등록하고 이웃에게 알려보세요!</p>
+      <span><a href="#">비즈프로필 만들기</a></span>
+    </div>
     </section> 
     <!-- // section2 -->
   </div>
   <!-- // container -->
 
-  <!-- footer -->
-  <footer id="footer">
-    <div class="foot_img">
+  <!-- 푸터 위 배너 -->
+  <div class="foot_bnn">
+    <div class="foot_bnn_inner">
       <p>동네 이웃들이 자주 가는<br />
         동네 가게</p>
       <p>우리 동네 사람들이<br />
         이용하는 가게를 찾아보세요.</p>
     </div>
-  </footer>
-  <!-- // footer -->
+  </div>
+  <!-- // 푸터 위 배너 -->
 
 </div>
 <!-- // wrap -->
