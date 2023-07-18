@@ -441,27 +441,33 @@ input::-webkit-search-results-decoration{
 }
 /* 각 배너 이미지 */
 .banner_frame section:nth-child(1) {
-  background-image: url(../images/index/source/images/main_image_04.png);
+  background-image: url(../images/index/source/images/main_image_4.png);
+  background-size: cover;
   z-index: 1;
 }
 .banner_frame section:nth-child(2) {
-  background-image: url(../images/index/source/images/main_image_01.png);
+  background-image: url(../images/index/source/images/main_image_1.png);
+  background-size: cover;
   z-index: 4;
 }
 .banner_frame section:nth-child(3) {
-  background-image: url(../images/index/source/images/main_image_02.png);
+  background-image: url(../images/index/source/images/main_image_2.png);
+  background-size: cover;
   z-index: 3;
 }
 .banner_frame section:nth-child(4) {
-  background-image: url(../images/index/source/images/main_image_03.png);
+  background-image: url(../images/index/source/images/main_image_3.png);
+  background-size: cover;
   z-index: 2;
 }
 .banner_frame section:nth-child(5) {
-  background-image: url(../images/index/source/images/main_image_04.png);
+  background-image: url(../images/index/source/images/main_image_4.png);
+  background-size: cover;
   z-index: 1;
 }
 .banner_frame section:nth-child(6) {
-  background-image: url(../images/index/source/images/main_image_01.png);
+  background-image: url(../images/index/source/images/main_image_1.png);
+  background-size: cover;
   z-index: 4;
 }
 
