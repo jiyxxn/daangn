@@ -11,8 +11,9 @@
   <main>
     <!-- aside -->
     <aside>
+      <h2 class="blind">나의 프로필</h2>
       <div class="profile">
-        <img src="images/mypage/img_profile.png" alt="프로필 사진">
+        <img src="images/mypage/images/img_profile.png" alt="프로필 사진">
         <a href="#">프로필 수정</a>
       </div>
       <ul>
@@ -64,39 +65,148 @@
       <!-- content1 -->
       <div class="content1">
         <h2>김바니님</h2>
+        <!-- 매너온도 -->
         <div class="manner_detail">
-            <h3>매너온도</h3>
-            <div class="temp">
-              <span>첫 온도 36.5℃</span>
-              <span>36.5℃</span>
-              <div class="temp_bar"></div>
-            </div>
-            <ul>
-              <li><span>재거래희망률 -%</span><span>표시될 만큼 충분히 거래하지 않았어요.</span></li>
-              <li><span>응답률 -%</span><span>표시될 만큼 충분히 거래하지 않았어요.</span></li>
-            </ul>
-            <span>자세히 보기</span>
+          <h3>매너온도</h3>
+          <div class="temp">
+            <span>첫 온도 36.5℃</span>
+            <span>36.5℃</span>
+            <div class="temp_bar"></div>
+          </div>
+          <ul>
+            <li><span>재거래희망률 -%</span><span>표시될 만큼 충분히 거래하지 않았어요.</span></li>
+            <li><span>응답률 -%</span><span>표시될 만큼 충분히 거래하지 않았어요.</span></li>
+          </ul>
+          <span>자세히 보기</span>
         </div>
+        <!-- 당근페이 -->
         <div class="pay_detail">
           <h3>당근페이 로고</h3>
           <span>당근하는 새로운 방법, 당근페이!</span>
-          <span>120,000원</span>
+          <span><strong>120,000</strong>원</span>
           <ul>
-            <li>충전</li>
-            <li>계좌송금</li>
+            <li><a href="#">충전</a></li>
+            <li><a href="#">계좌송금</a></li>
           </ul>
           <span>자세히 보기</span>
         </div>
       </div>
       <!-- //content1 -->
       <!-- content2 -->
-      <div class="content2"></div>
+      <div class="content2">
+        <h2>나의 거래</h2>
+        <h3>판매내역</h3>
+        <dl>
+          <dt class="selling on"><a href="#">판매중</a></dt>
+          <dd class="selling">
+            <ul>
+              <li>
+                <a href="#">
+                  <ul class="product_item">
+                    <li class="product_img"><img src="images/index/product_img/pro_img_16.jpeg" alt="판매중 아이템 1"></li>
+                    <li>디올가방 반의반값으로 팔아요</li>
+                    <li>600,000원</li>
+                    <li>부산 부산진구 부전제2동</li>
+                    <li>관심 30 • 채팅 5</li>
+                  </ul>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <ul class="product_item">
+                    <li class="product_img"><img src="images/index/product_img/pro_img_15.jpeg" alt="판매중 아이템 2"></li>
+                    <li>아임삭 충전 임팩트 드라이버...</li>
+                    <li>20,000원</li>
+                    <li>인천 서구 경서동</li>
+                    <li>관심 7 • 채팅 8</li>
+                  </ul>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <ul class="product_item">
+                    <li class="product_img"><img src="images/index/product_img/pro_img_14.jpeg" alt="판매중 아이템 3"></li>
+                    <li>캠핑 접습니다</li>
+                    <li>123원</li>
+                    <li>경기도 평택시 비전동</li>
+                    <li>관심 52 • 채팅 57</li>
+                  </ul>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <ul class="product_item">
+                    <li class="product_img"><img src="images/index/product_img/pro_img_13.jpeg" alt="판매중 아이템 4"></li>
+                    <li>스쿳앤라이드 팝니다</li>
+                    <li>50,000원</li>
+                    <li>경기도 부천시 송내동</li>
+                    <li>관심 4 • 채팅 20</li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+          </dd>
+          <dt class="complete"><a href="#">거래완료</a></dt>
+          <dd class="complete">
+            <ul>
+              <li>
+                <a href="#">
+                  <ul class="product_item">
+                    <li class="product_img"><img src="images/index/product_img/pro_img_24.jpeg" alt="거래완료 아이템1"></li>
+                    <li>한샘 수납장</li>
+                    <li>10,000원</li>
+                    <li>인천 부평구 십정1동</li>
+                    <li>관심 28 • 채팅 16</li>
+                  </ul>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <ul class="product_item">
+                    <li class="product_img"><img src="images/index/product_img/pro_img_23.jpeg" alt="거래완료 아이템2"></li>
+                    <li>아파트 쉼터에 있는 작은 정자 ...</li>
+                    <li>200,000원</li>
+                    <li>전남 해남군 해남읍</li>
+                    <li>관심 13 • 채팅 16</li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+          </dd>
+          <dt class="hide"><a href="#">숨김</a></dt>
+          <dd class="hide">숨긴 게시글이 없어요.</dd>
+        </dl>
+        <!-- 판매중 -->
+
+      </div>
       <!-- //content2 -->
       <!-- content3 -->
-      <div class="content3"></div>
+      <div class="content3">
+        <h3>구매내역</h3>
+        <div>
+          <p>구매 내역이 없어요.<br>
+            동네 이웃과 따뜻한 거래를 해보세요.</p>
+        </div>
+      </div>
       <!-- //contet3 -->
       <!-- content4 -->
-      <div class="content4"></div>
+      <div class="content4">
+        <h3>중고거래 가계부</h3>
+        <div class="finance_rec">
+          <strong>김바니님의<br>가계부</strong>
+          <p>더 이상 필요하지 않은 물건을 짐처럼 쌓아 두거나 버리지 말고,<br>
+            꼭 필요한 이웃이 찾아가도록 도와주세요!</p>
+          <span>6월</span>
+          <span>5월 전체거래</span>
+          <strong>0원</strong>
+          <p>거래내역이 없어요.<br>
+            다음 달 가계부에서 다시 만나요!</p>
+        </div>
+        <div class="min_banner">
+          <p><span>가게를 운영하고 계신가요?</span>당근마켓에 등록하고 이웃에게 알려보세요!</p>
+          <a href="#">비즈프로필 만들기</a>
+        </div>
+      </div>
       <!-- //content4 -->
     </div>
     <!-- //container -->
@@ -104,7 +214,10 @@
   <!-- //main -->
   <!-- 푸터 위 배너 -->
   <div class="mypage_banner">
-    <img src="images/mypage/main_banner_img.jpg" alt="동네 가게 배너 이미지" width="100%">
+    <span>동네 이웃들이 자주 가는<br>
+      동네 가게</span>
+    <span>우리 동네 사람들이<br>
+      이용하는 가게를 찾아보세요.</span>
   </div>
 </body>
 </html>
