@@ -200,6 +200,14 @@ $(".que").click(function(){
   $(this).next(".anw").siblings(".anw").slideUp(400);
 })
 
+// faq 포커싱 이벤트 
+$(".que").focusin(function(){
+  $(this).next(".anw").stop().slideToggle(400); 
+  $(this).toggleClass("on").siblings().removeClass("on");  
+  $(this).next(".anw").siblings(".anw").slideUp(400); 
+})
+  
+
 // 당근페이 캐러셀
 const $carousel_cells = $(".product-carousel>li");
 const $carousel_nav = $(".carousel-nav");
