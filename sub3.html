@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/sub3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script defer src="js/sub3.js"></script>
   <title>마이페이지 | 당근마켓</title>
 </head>
 <body>
@@ -87,7 +89,7 @@
                 <span>표시될 만큼 충분히 거래하지 않았어요.</span>
               </li>
             </ul>
-            <span>자세히 보기</span>
+            <span><a href="#">자세히 보기</a></span>
           </div>
           <div class="daangnPay">
             <h3>당근페이</h3>
@@ -97,7 +99,7 @@
               <li><a href="#">충전</a></li>
               <li><a href="#">계좌송금</a></li>
             </ul>
-            <span>자세히 보기</span>
+            <span><a href="#">자세히 보기</a></span>
           </div>
         </section>
         <!-- //content1 -->
@@ -105,62 +107,95 @@
           <h2>나의 거래</h2>
           <article class="sales">
             <h3>판매내역</h3>
-            <ul>
-              <li class="onSale active"><a href="#">판매중</a></li>
-              <li class="completed"><a href="#">거래완료</a></li>
-              <li class="hidden"><a href="#">숨김</a></li>
-            </ul>
-            <ul class="onSale box active">
-              <li>
-                <a href="#">
-                  <img src="images/index/product_img/pro_img_16.jpeg" alt="디올가방">
-                  <p>디올가방 반에반값으로 팔아요</p>
-                  <p>600,000<span>원</span></p>
-                </a>
-                <span>부산 부산진구 부전제2동</span>
-                <span>관심 30 · 채팅 5</span>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/index/product_img/pro_img_15.jpeg" alt="아임삭 충전 임팩트 드라이버">
-                  <p>아임삭 충전 임팩트 드라이버</p>
-                  <p>20,000<span>원</span></p>
-                </a>
-                <span>인천 서구 경서동</span>
-                <span>관심 7 · 채팅 8</span>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/index/product_img/pro_img_14.jpeg" alt="캠핑">
-                  <p>캠핑 접습니다</p>
-                  <p>123<span>원</span></p>
-                </a>
-                <span>경기도 평택시 비전동</span>
-                <span>관심 52 · 채팅 57</span>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/index/product_img/Pro_img_13.jpeg" alt="스쿳앤라이드">
-                  <p>스쿳앤라이드 팝니다</p>
-                  <p>50,000<span>원</span></p>
-                </a>
-                <span>경기도 부천시 송내동</span>
-                <span>관심 4 · 채팅 20</span>
-              </li>
-            </ul>
-            <ul class="completed box">
-              <li></li>
-            </ul>
-            <ul class="hide box">
-              <li></li>
-            </ul>
-            <span>더보기</span> <!-- 위치 애매함-->
-          </article>
-          <article class="buy">
-            <h3>구매내역</h3>
-            <ul>
-              <li>구매 내역이 없어요.<br>동네 이웃과 따뜻한 거래를 해보세요.</li>
-            </ul>
+            <dl class="onSale active">
+              <dt><a href="#">판매중</a></dt>
+              <div>
+                <dd>
+                  <a href="#">
+                    <img src="images/index/product_img/pro_img_16.jpeg" alt="디올가방">
+                    <p>디올가방 반에반값으로 팔아요</p>
+                    <p>600,000<span>원</span></p>
+                  </a>
+                  <span>부산 부산진구 부전제2동</span>
+                  <span>관심 30 · 채팅 5</span>
+                </dd>
+                <dd>
+                  <a href="#">
+                    <img src="images/index/product_img/pro_img_15.jpeg" alt="아임삭 충전 임팩트 드라이버">
+                    <p>아임삭 충전 임팩트 드라이버</p>
+                    <p>20,000<span>원</span></p>
+                  </a>
+                  <span>인천 서구 경서동</span>
+                  <span>관심 7 · 채팅 8</span>
+                </dd>
+                <dd>
+                  <a href="#">
+                    <img src="images/index/product_img/pro_img_14.jpeg" alt="캠핑">
+                    <p>캠핑 접습니다</p>
+                    <p>123<span>원</span></p>
+                  </a>
+                  <span>경기도 평택시 비전동</span>
+                  <span>관심 52 · 채팅 57</span>
+                </dd>
+                <dd>
+                  <a href="#">
+                    <img src="images/index/product_img/Pro_img_13.jpeg" alt="스쿳앤라이드">
+                    <p>스쿳앤라이드 팝니다</p>
+                    <p>50,000<span>원</span></p>
+                  </a>
+                  <span>경기도 부천시 송내동</span>
+                  <span>관심 4 · 채팅 20</span>
+                </dd>
+                <dd>
+                  <a href="#">
+                    <img src="images/index/product_img/pro_img_05.jpeg" alt="아이폰 13pro">
+                    <p>아이폰 13pro 256 시에라블루</p>
+                    <p>990,000<span>원</span></p>
+                  </a>
+                  <span>서울 마포구 공덕동</span>
+                  <span>관심 4 ・ 채팅 31</span>
+                </dd>
+                <dd>
+                  <a href="#">
+                    <img src="images/index/product_img/pro_img_04.jpeg" alt="어머니 들기름">
+                    <p>어머니 들기름</p>
+                    <p>20,000<span>원</span></p>
+                  </a>
+                  <span>서울 노원구 공릉동</span>
+                  <span>관심 10 ・ 채팅 14</span>
+                </dd>
+                <dd>
+                  <a href="#">
+                    <img src="images/index/product_img/pro_img_03.jpeg" alt="스텐찬통">
+                    <p>스텐찬통</p>
+                    <p>10,000<span>원</span></p>
+                  </a>
+                  <span>대구 수성구 만촌2동</span>
+                  <span>관심 15 ・ 채팅 32</span>
+                </dd>
+                <dd>
+                  <a href="#">
+                    <img src="images/index/product_img/pro_img_02.jpeg" alt="미니 쿠퍼 푸쉬카">
+                    <p>파파야나인 미니 쿠퍼 푸쉬카</p>
+                    <p>30,000<span>원</span></p>
+                  </a>
+                  <span>경기 용인시 기흥구 서천동</span>
+                  <span>관심 11 ・ 채팅 28</span>
+                </dd>
+              </div>
+            </dl>
+            <dl class="completed">
+              <dt><a href="#">거래완료</a></dt>
+              <div>
+                <dd></dd>
+              </div>
+            </dl>
+            <dl class="hide">
+              <dt><a href="#">숨김</a></dt>
+              <div>
+                <dd></dd>
+              </div>
+            </dl>
           </article>
           <!-- 중고거래 가계부 -->
           <article class="budget">
@@ -195,7 +230,7 @@
     <!-- //#container -->
     <!-- 이게맞나 싶음 -->
     <div class="fullBanner">
-      <img src="images/mypage/main_banner_img.jpg" alt="">
+      <img src="images/mypage/images/main_banner_img.jpg" alt="동네 이웃들이 자주 가는 동네 가게">
       <p>동네 이웃들이 자주 가는<br>동네 가게</p>
       <p>우리 동네 사람들이<br>이용하는 가게를 찾아보세요.</p>
     </div>
