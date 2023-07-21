@@ -114,10 +114,6 @@ div.profile > a {
   text-align: center;
 }
 
-aside#aside > ul {}
-aside#aside > ul > li {
-
-}
 aside#aside > ul > li > a {
   display: block;
   /* align-items: center; */
@@ -336,8 +332,7 @@ section.content1 > div.daangnPay > h3 {
   overflow: hidden;
   width: 90px;
   height: 32px;
-  /* 이미지 실종 */
-  background: url() no-repeat -10px -10px;
+  background: url(../images/mypage/images/ico_pay_img.svg) no-repeat;
 }
 section.content1 > div.daangnPay > p {
   font-size: 12px;
@@ -410,6 +405,7 @@ section.content2 > h2 {
 section.content2 > article.sales {
   position: relative;
   height: 600px;
+  /* border: solid 1px blue; */
   /* 요소들이 absolute라서 height 정해줌 */
 }
 section.content2 > article.sales > h3 {
@@ -419,97 +415,95 @@ section.content2 > article.sales > h3 {
   margin-bottom: 20px;
 }
 
-section.content2 > article.sales > ul:first-of-type {
-  display: flex;
+section.content2 > article.sales > dl {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 880px;
+  height: 400px;
 }
-section.content2 > article.sales > ul:first-of-type > li > a {
-  display: block;
+
+section.content2 > article.sales > dl > div {
   box-sizing: border-box;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  background: #FAFAFA;
+  padding: 0 20px;
+  visibility: hidden;
+  overflow: hidden;
+}
+section.content2 > article.sales > dl.active > div {
+  visibility: visible;
+}
+section.content2 > article.sales > dl:first-of-type > div {z-index: 40;}
+section.content2 > article.sales > dl:nth-of-type(2) > div {z-index: 30;}
+section.content2 > article.sales > dl:nth-of-type(3) > div {z-index: 20;}
+
+section.content2 > article > dl dt > a {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 150px;
   height: 40px;
   line-height: 40px;
   text-align: center;
   font-size: 15px;
-  z-index: 40;
+  z-index: 50;
 }
-section.content2 > article.sales > ul:first-of-type > li.active > a{
+
+section.content2 > article > dl:nth-of-type(2) dt > a{
+  left: 150px;
+}
+section.content2 > article > dl:nth-of-type(3) dt > a{
+  left: 300px;
+}
+
+section.content2 > article.sales > dl.active dt > a{
   font-family: 'Pretendard-SemiBold';
   font-weight: 600;
   border-bottom: solid 2px #FF8A3D;
 }
 
-section.content2 > article.sales > ul.box {
-  visibility: hidden;
-  position: absolute;
-  display: flex;
-  left: 0;
-  top: 89px;
-  width: 880px;
-  height: 419px;
-  background: #FAFAFA;
-  z-index: 1;
-  overflow: hidden;
-}
-section.content2 > article.sales > ul.box > li {
+section.content2 > article.sales > dl dd {
   display: flex;
   flex-flow: column nowrap;
-  margin: 48px 20px 0 20px;
   line-height: 1;
+  height: 271px;
 }
-section.content2 > article.sales > ul.box > li > a img {
+
+section.content2 > article.sales > dl dd > a img {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 20px;
   margin-bottom: 5px;
 }
-section.content2 > article.sales > ul.box > li > a > p {
+section.content2 > article.sales > dl dd > a > p {
   font-size: 13px;
   margin-top: 5px;
 }
-section.content2 > article.sales > ul.box > li > a > p:last-of-type {
+section.content2 > article.sales > dl dd > a > p:last-of-type {
   font-family: 'Pretendard-SemiBold';
   font-weight: 600;
 }
-section.content2 > article.sales > ul.box > li > a > p:last-of-type > span {
+section.content2 > article.sales > dl dd > a > p:last-of-type > span {
   font-size: 10px;
   margin-left: 2px;
 }
-section.content2 > article.sales > ul.box > li > span {
+section.content2 > article.sales > dl dd > span {
   font-size: 10px;
   margin-top: 5px;
 }
-section.content2 > article.sales > ul.box > li > span:last-of-type {
+section.content2 > article.sales > dl dd > span:last-of-type {
   color: #777777;
 }
-section.content2 > article.sales > ul.box.active {
-  visibility: visible;
-}
-section.content2 > article.buy> h3 {
-  font-size: 24px;
-  font-family: 'Pretendard-SemiBold';
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-section.content2 > article.buy > ul {
-  position: relative;
-  width: 880px;
-  height: 419px;
-  background: #FAFAFA;
-  z-index: 1;
-  overflow: hidden;
-  margin-bottom: 35px;
-}
-section.content2 > article.buy > ul > li {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color :#838383;
-}
 
-section.content2 > article.budget {}
 section.content2 > article.budget > h3 {
   font-size: 24px;
   font-family: 'Pretendard-Bold'; 
@@ -578,7 +572,7 @@ section.content2 > div.banner {
   background: #FDF6EC url(../images/mypage/images/ico_mini_banner.png) no-repeat 10% 0;
   padding-left: 48px;
   box-sizing: border-box;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   margin-top: 100px;
 }
 section.content2 > div.banner > p {
