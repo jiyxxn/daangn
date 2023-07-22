@@ -429,7 +429,7 @@ section.content2 > article.sales > dl > div {
   top: 40px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: flex;
   column-gap: 30px;
   align-items: center;
@@ -441,6 +441,17 @@ section.content2 > article.sales > dl > div {
 section.content2 > article.sales > dl.active > div {
   visibility: visible;
 }
+section.content2 > article.sales > dl > p {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 1.5;
+  z-index: 60;
+}
+
 section.content2 > article.sales > dl:first-of-type > div {z-index: 40;}
 section.content2 > article.sales > dl:nth-of-type(2) > div {z-index: 30;}
 section.content2 > article.sales > dl:nth-of-type(3) > div {z-index: 20;}
