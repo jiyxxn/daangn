@@ -4,7 +4,6 @@ $(document).ready(function (){
   var startX = 0;
   var scrollLeft = 0;
   var slider = document.querySelector("dl.active > div");
-  console.log(slider)
 
   slider.addEventListener("mousedown", function(e){
     bMove = true;
@@ -34,5 +33,33 @@ $(document).ready(function (){
     }
   });
 
+  let dt = document.querySelectorAll("article.sales dt");
+  let dl = document.querySelectorAll("article.sales dl")
+  let dd = document.querySelectorAll("article dl > div")
+  let list = document.querySelectorAll("article > dl > p")
+  
+  for(let d=0; d<dt.length; d++){
+    dt[d].addEventListener("click", e => {
+      dl.forEach(item => {
+        item.classList.remove("active");
+      })
+      e.currentTarget.parentElement.classList.add("active");
 
+      if(dd[d].childElementCount > 0){
+        list.forEach(item => {
+          item.style.display = "none"
+        })
+        dd[d].nextElementSibling.style.display = "none"
+      } else {
+        list.forEach(item => {
+          item.style.display = "none"
+        })
+        dd[d].nextElementSibling.style.display = "block"
+      }
+    })
+  }
 });
+  
+  
+
+
