@@ -10,6 +10,9 @@
 
 <!-- script -->
 <script defer src="js/sub2.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </head>
 <body>
@@ -107,99 +110,220 @@
         </div>
         <!-- // 당근페이 -->
       </div>
-    </section> 
+    </section>
     <!-- // section1 -->
 
     <!-- section2 -->
     <section id="deal_info">
       <h2>나의 거래</h2>
+
       <!-- 판매내역 -->
       <div class="sales">
         <h3>판매내역</h3>
-        <ul>
-          <li><a href="#">판매중</a></li>
-          <li><a href="#">거래완료</a></li>
-          <li><a href="#">숨김</a></li>
-        </ul>
-          <div class="sales_cont">
-            <ul class="slides">
+        <dl>
+          <!-- 판매중 -->
+          <dt class="sales_title on"><a href="#">판매중</a></dt>
+          <dd class="sales_cont on">
+            <ul class="slides prod_slides">
               <!-- 첫번째 상품 -->
-              <li>
-                <img src="/images/mypage/images/pro_img_01.jpeg" alt="첫번째 상품 이미지" width="200">
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_01.jpeg" alt="첫번째 상품 이미지" width="200"></a>
                 <a href="#">아이폰 13pro 256 시에라블루</a>
                 <ul>
                   <li>990,000 <span>원</span></li>
-                  <li>서울 마포구 공덕동</li> 
+                  <li>서울 마포구 공덕동</li>
                   <li>관심 4 ∙ 채팅 31</li>
                 </ul>
               </li>
               <!-- // 첫번째 상품 -->
 
               <!-- 두번째 상품 -->
-              <li>
-                <img src="/images/mypage/images/pro_img_02.jpeg" alt="두번째 상품 이미지" width="200">
-                <a href="#">어머니 들기름</a>
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_02.jpeg" alt="두번째 상품 이미지" width="200"></a>
+                <a href="#">삼성비스포크 냉장고.냉동고 ...</a>
                 <ul>
-                  <li>20,000 <span>원</span></li>
-                  <li>서울 노원구 공릉동</li> 
-                  <li>관심 10 ∙ 채팅 14</li>
+                  <li>350,000 <span>원</span></li>
+                  <li>경긷고 파주시 야당동</li>
+                  <li>관심 35 ∙ 채팅 8</li>
                 </ul>
               </li>
               <!-- // 두번째 상품 -->
 
               <!-- 세번째 상품 -->
-              <li>
-                <img src="/images/mypage/images/pro_img_03.jpeg" alt="세번째 상품 이미지" width="200">
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_03.jpeg" alt="세번째 상품 이미지" width="200"></a>
                 <a href="#">스텐찬통</a>
                 <ul>
                   <li>10,000 <span>원</span></li>
-                  <li>대구 수성구 만촌2동</li> 
+                  <li>대구 수성구 만촌2동</li>
                   <li>관심 15 ∙ 채팅 32</li>
                 </ul>
               </li>
               <!-- // 세번째 상품 -->
 
               <!-- 네번째 상품 -->
-              <li>
-                <img src="/images/mypage/images/pro_img_04.jpeg" alt="네번째 상품 이미지" width="200">
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_04.jpeg" alt="네번째 상품 이미지" width="200"></a>
                 <a href="#">파파야나인 미니 쿠퍼 푸쉬카</a>
                 <ul>
                   <li>30,000 <span>원</span></li>
-                  <li>경기도 용인시 기흥구 서천동</li> 
+                  <li>경기도 용인시 기흥구 서천동</li>
                   <li>관심 11 ∙ 채팅 28</li>
                 </ul>
               </li>
               <!-- // 네번째 상품 -->
 
               <!-- 다섯번째 상품 -->
-              <li>
-                <img src="/images/mypage/images/pro_img_05.jpeg" alt="다섯번째 상품 이미지" width="200">
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_05.jpeg" alt="다섯번째 상품 이미지" width="200"></a>
                 <a href="#">디올가방 반에반값으로 팔아요</a>
                 <ul>
                   <li>600,000 <span>원</span></li>
-                  <li>부산 부산진구 부전제2동</li> 
+                  <li>부산 부산진구 부전제2동</li>
                   <li>관심 30 ∙ 채팅 5</li>
                 </ul>
               </li>
               <!-- // 다섯번째 상품 -->
 
               <!-- 여섯번째 상품 -->
-              <li>
-                <img src="/images/mypage/images/pro_img_06.jpeg" alt="여섯번째 상품 이미지" width="200">
-                <a href="#">아임삭 충천 임팩트 드라이버 ...</a>
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_06.jpeg" alt="여섯번째 상품 이미지" width="200"></a>
+                <a href="#">헬렌카민스키 모자 팝니다</a>
                 <ul>
-                  <li>20,000 <span>원</span></li>
-                  <li>인천 서구 경서동</li> 
-                  <li>관심 7 ∙ 채팅 8</li>
+                  <li>30,000 <span>원</span></li>
+                  <li>경남 창원시 마산회원구 회원1동</li>
+                  <li>관심 35 ∙ 채팅 35</li>
                 </ul>
               </li>
               <!-- // 여섯번째 상품 -->
 
+              <!-- 일곱번째 상품 -->
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_07.jpeg" alt="일곱번째 상품 이미지" width="200"></a>
+                <a href="#">새신발</a>
+                <ul>
+                  <li>30,000 <span>원</span></li>
+                  <li>서울 강북구 번1동</li>
+                  <li>관심 11 ∙ 채팅 11</li>
+                </ul>
+              </li>
+              <!-- // 일곱번째 상품 -->
+
+              <!-- 여덟번째 상품 -->
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_08.jpeg" alt="여덟번째 상품 이미지" width="200"></a>
+                <a href="#">자전거</a>
+                <ul>
+                  <li>50,000 <span>원</span></li>
+                  <li>경기도 남양주시 진전읍</li>
+                  <li>관심 1 ∙ 채팅 21</li>
+                </ul>
+              </li>
+              <!-- // 여덟번째 상품 -->
+
+              <!-- 아홉번째 상품 -->
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_09.jpeg" alt="아홉번째 상품 이미지" width="200"></a>
+                <a href="#">우드4단 선반</a>
+                <ul>
+                  <li>5,000 <span>원</span></li>
+                  <li>전남 여수시 웅천동</li>
+                  <li>관심 9 ∙ 채팅 20</li>
+                </ul>
+              </li>
+              <!-- // 아홉번째 상품 -->
+
+              <!-- 열번째 상품 -->
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_10.jpeg" alt="열번째 상품 이미지" width="200"></a>
+                <a href="#">캠핑 접습니다</a>
+                <ul>
+                  <li>123 <span>원</span></li>
+                  <li>경기도 평택시 비전동</li>
+                  <li>관심 52 ∙ 채팅 57</li>
+                </ul>
+              </li>
+              <!-- // 열번째 상품 -->
+
+              <!-- 열한번째 상품 -->
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_11.jpeg" alt="열한번째 상품 이미지" width="200"></a>
+                <a href="#">스쿳앤라이드 핑크</a>
+                <ul>
+                  <li>40,000 <span>원</span></li>
+                  <li>서울 노원구 상계1동</li>
+                  <li>관심 2 ∙ 채팅 16</li>
+                </ul>
+              </li>
+              <!-- // 열한번째 상품 -->
+
+              <!-- 열두번째 상품 -->
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_12.jpeg" alt="열두번째 상품 이미지" width="200"></a>
+                <a href="#">콜맨 캠핑 체어 2인 벤치</a>
+                <ul>
+                  <li>5,000 <span>원</span></li>
+                  <li>경기도 성남시 분당구 판교동</li>
+                  <li>관심 82 ∙ 채팅 81</li>
+                </ul>
+              </li>
+              <!-- // 열두번째 상품 -->
+
+              <!-- 열세번째 상품 -->
+              <li class="prod">
+                <a href="#"><img src="/images/mypage/images/pro_img_13.jpeg" alt="열세번째 상품 이미지" width="200"></a>
+                <a href="#">추피의생활동화 60권+낱말놀이책</a>
+                <ul>
+                  <li>60,000 <span>원</span></li>
+                  <li>60,000</li>
+                  <li>관심 10 ∙ 채팅 15</li>
+                </ul>
+              </li>
+              <!-- // 열세번째 상품 -->
             </ul>
-            <a href="#"><span>더보기</span> +</a>
-          </div>
+          </dd>
+          <!-- // 판매중 -->
+
+          <!-- 거래완료 -->
+          <dt class="deal_title "><a href="#">거래완료</a></dt>
+          <dd class="deal_cont">
+            <ul>
+              <!-- 첫번째 상품 -->
+              <li>
+                <a href="#"><img src="/images/mypage/images/pro_img_14.jpeg" alt="첫번째 상품 이미지" width="200"></a>
+                <a href="#">한샘 수납장</a>
+                <ul>
+                  <li>10,000 <span>원</span></li>
+                  <li>인천 부평구 십정1동</li>
+                  <li>관심 28 ∙ 채팅 16</li>
+                </ul>
+              </li>
+              <!-- // 첫번째 상품 -->
+
+              <!-- 두번째 상품 -->
+              <li>
+                <a href="#"><img src="/images/mypage/images/pro_img_15.jpeg" alt="두번째 상품 이미지" width="200"></a>
+                <a href="#">아파트 쉼터에 있는 작은 정자 ...</a>
+                <ul>
+                  <li>200,000 <span>원</span></li>
+                  <li>전남 해남군 해남읍</li>
+                  <li>관심 10 ∙ 채팅 22</li>
+                </ul>
+              </li>
+              <!-- // 두번째 상품 -->
+            </ul>
+          </dd>
+          <!-- // 거래완료 -->
+
+          <!-- 숨김 -->
+          <dt class="hide_title"><a href="#">숨김</a></dt>
+          <dd class="hide_cont">
+            <p>숨긴 게시글이 없어요.</p>
+          </dd>
+          <!-- // 숨김 -->
+        </dl>
       </div>
-      <!-- 판매내역 -->
+      <!-- // 판매내역 전체 -->
 
       <!-- 구매내역 -->
       <div class="purchase">
@@ -235,7 +359,7 @@
       당근마켓에 등록하고 이웃에게 알려보세요!</p>
       <span><a href="#">비즈프로필 만들기</a></span>
     </div>
-    </section> 
+    </section>
     <!-- // section2 -->
   </div>
   <!-- // container -->
@@ -253,6 +377,6 @@
 
 </div>
 <!-- // wrap -->
-  
+
 </body>
 </html>
