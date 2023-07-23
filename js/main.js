@@ -50,7 +50,6 @@ menuTitles.forEach(function (menuTitle) {
   });
 });
 
-// focus event
 $('.category_menu').on("focusout", function() {
   setTimeout(function() {
     if (isClick === true) {
@@ -75,11 +74,13 @@ $('.category_menu').on("focus", function() {
   categoryBtn.dispatchEvent(event)
 })
 
+
 document.body.addEventListener("keydown", function(e) {
   if (event.keyCode === 9) {
     isClick = false;
   }
 });
+
 
 // 배너
 var bannerFrame = document.querySelector(".banner_frame");
@@ -113,13 +114,13 @@ nextBtn.addEventListener("click", function () {
 });
 
 
-// 슬라이드 업데이트 함수
+// 배너 업데이트 함수
 function updateSlide() {
-    // 일반적인 슬라이드 전환
+    // 일반적인 배너 전환
     bannerFrame.style.transition = "transform 0.5s ease-in-out";
     bannerFrame.style.transform =
       "translateX(" + -bannerWidth * currentIndex + "px)";
-    
+
     if (bannerItems[currentIndex].id === 'firstClone') {
       pageIndex = 1;
     } else if (bannerItems[currentIndex].id === 'lastClone') {
@@ -127,7 +128,7 @@ function updateSlide() {
     } else {
       pageIndex = currentIndex;
     }
-    
+
     updatePagination(pageIndex);
 
     // 배너가 짝수번째일때 banner_roll에 클래스 추가
