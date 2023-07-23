@@ -19,6 +19,7 @@ categoryBtn.addEventListener("click", (e) => {
     open = true
   }
 })
+let isClick = false;
 
 // 하위메뉴 클릭 이벤트
 document.querySelectorAll(".slide_menu").forEach(function(menu) {
@@ -27,8 +28,7 @@ document.querySelectorAll(".slide_menu").forEach(function(menu) {
 var menuTitles = document.querySelectorAll(".menu_title");
 menuTitles.forEach(function (menuTitle) {
   menuTitle.addEventListener("click", function () {
-
-
+    isClick = true;
     var ul = menuTitle.querySelector("ul.slide_menu");
     if (ul.style.maxHeight){
       ul.style.maxHeight = null;
@@ -50,7 +50,38 @@ menuTitles.forEach(function (menuTitle) {
   });
 });
 
-// 슬라이드
+// focus event
+$('.category_menu').on("focusout", function() {
+  setTimeout(function() {
+    if (isClick === true) {
+      return ;
+    }
+    const event = new MouseEvent("click", {
+        bubbles: false,
+        cancelable: true,
+        view: window
+    });
+    isClick = false;
+    categoryBtn.dispatchEvent(event)
+  }, 100)
+})
+
+$('.category_menu').on("focus", function() {
+  const event = new MouseEvent("click", {
+      bubbles: false,
+      cancelable: true,
+      view: window
+  });
+  categoryBtn.dispatchEvent(event)
+})
+
+document.body.addEventListener("keydown", function(e) {
+  if (event.keyCode === 9) {
+    isClick = false;
+  }
+});
+
+// 배너
 var bannerFrame = document.querySelector(".banner_frame");
 var bannerItems = document.querySelectorAll(".banner_item");
 var actualBannerItems = document.querySelectorAll(".banner_item.actual");
