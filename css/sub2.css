@@ -7,7 +7,10 @@
 }
 a {
   text-decoration: none;
-  color: #333;
+  color: #191919;
+}
+button {
+  all: unset;
 }
 /* 폰트 세팅 */
 @font-face {
@@ -41,11 +44,16 @@ a {
   font-style: normal;
 }
 
+#wrap {
+  width: 1920px;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
 #container {
   width: 1320px;
   height: 2277px;
   margin: 0 auto;
-  border: 1px solid #333;
 }
 
 /* 네비게이션 */
@@ -62,7 +70,7 @@ a {
   width: 217px;
   height: 217px;
   margin: 0 auto;
-  background:  url(../images/mypage/img_profile.png);
+  background:  url(../images/mypage/images/img_profile.png);
   background-size: cover;
   text-indent: -9999px;
 }
@@ -115,7 +123,7 @@ a {
   left: 18px;
   width: 23px;
   height: 23px;
-  background: url(../images/mypage/ico_menu.png) no-repeat -96px -10px;
+  background: url(../images/mypage/icon/ico_menu.svg) no-repeat 0 0;
 }
 /* 나의 동네생활 */
 #nav>ul>li.town>a:before {
@@ -125,7 +133,7 @@ a {
   left: 18px;
   width: 23px;
   height: 23px;
-  background: url(../images/mypage/ico_menu.png) no-repeat -10px -10px;
+  background: url(../images/mypage/icon/ico_menu_02.svg) no-repeat 0 0;
 }
 /* 동네 가게 */
 #nav>ul>li.shop>a:before {
@@ -135,7 +143,7 @@ a {
   left: 18px;
   width: 23px;
   height: 23px;
-  background: url(../images/mypage/ico_menu.png) no-repeat -53px -53px;
+  background: url(../images/mypage/icon/ico_menu_03.svg) no-repeat 0 0;
 }
 /* 나의 비즈니스 */
 #nav>ul>li.business>a:before {
@@ -145,7 +153,7 @@ a {
   left: 18px;
   width: 23px;
   height: 23px;
-  background: url(../images/mypage/ico_menu.png) no-repeat -10px -53px;
+  background: url(../images/mypage/icon/ico_menu_04.svg) no-repeat 0 0;
 }
 /* 기타 */
 #nav>ul>li.other>a:before {
@@ -155,7 +163,7 @@ a {
   left: 18px;
   width: 23px;
   height: 23px;
-  background: url(../images/mypage/ico_menu.png) no-repeat -53px -10px;
+  background: url(../images/mypage/icon/ico_menu_05.svg) no-repeat 0 0;
 }
 
 /* 하위메뉴 */
@@ -189,8 +197,10 @@ a {
   justify-content: space-around;
   padding-top: 30px;
 }
+
 /* 매너온도 */
 #user_info>.content1>.manner {
+  /* display: flex; */
   width: 400px;
   height: 184px;
   padding: 20px 24px;
@@ -198,11 +208,217 @@ a {
   background-color: #FFF0E5;
   border-radius: 20px;
 }
+
+/* 매너 온도 타이틀 ~ 자세히보기 */
+#user_info>.content1>.manner>.manner_top {
+  display: flex;
+  column-gap: 184px;
+}
+#user_info>.content1>.manner>.manner_top>h3 {
+  font-size: 25px;
+  font-family: 'Pretendard-Bold';
+}
+#user_info>.content1>.manner>.manner_top>span>a {
+  position: relative;
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+}
+#user_info>.content1>.manner>.manner_top>span>a:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../images/mypage/icon/ico_arrow_right.svg) no-repeat 5px 6px;
+}
+
+/* 온도 그래프 */
+#user_info>.content1>.manner>.manner_middle {
+  display: flex;
+  /* column-gap: 0px; */
+  font-family: 'Pretendard-Regular';
+}
+#user_info>.content1>.manner>.manner_middle>p:first-of-type {
+  display: block;
+  position: relative;
+  margin: 20px 85px 10px 120px;
+  box-sizing: border-box;
+ font-size: 12px;
+ color: #727272;
+}
+#user_info>.content1>.manner>.manner_middle>p:first-of-type:after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 32px;
+  width: 7px;
+  height: 4px;
+  background: url(../images/mypage/icon/ico_triangle.svg) no-repeat 0 0;
+}
+#user_info>.content1>.manner>.manner_middle>p:last-of-type {
+  position: relative;
+  padding-top: 12.5px;
+  font-size: 15px;
+  font-family: 'Pretendard-SemiBold';
+  color: #3C3B3B;
+}
+#user_info>.content1>.manner>.manner_middle>p:last-of-type:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 54px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/mypage/icon/ico_smile.svg) no-repeat 0 0;
+}
+#user_info>.content1>.manner>.temp_bar {
+  position: relative;
+  width: 346px;
+  height: 16px;
+  margin: 0 auto;
+  background: #fff;
+  text-indent: -9999px;
+  border-radius: 100px;
+}
+#user_info>.content1>.manner>.temp_bar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 153px;
+  height: 16px;
+  background: #FF8A3D;
+  border-radius: 100px;
+}
+
+/* 재거래희망률 ~ 응답률 */
+#user_info>.content1>.manner>ul {
+  display: flex;
+  column-gap: 35px;
+  margin: 15px 0 5px 10px;
+  font-size: 15px;
+  font-family: 'Pretendard-Regular';
+}
+/* 재거래희망률 */
+#user_info>.content1>.manner>ul>li:first-of-type {
+  padding-left: 20px;
+  background: url(../images/mypage/icon/ico_heart.svg) no-repeat -1px 1px;
+}
+#user_info>.content1>.manner>ul>li:first-of-type>ul>li {
+  padding-top: 3px;
+  font-size: 10px;
+  color: #727272;
+}
+/* 응답률 */
+#user_info>.content1>.manner>ul>li:last-of-type {
+  padding-left: 20px;
+  background: url(../images/mypage/icon/ico_chat.svg) no-repeat 0px 1px;
+}
+#user_info>.content1>.manner>ul>li:last-of-type>ul>li {
+  padding-top: 3px;
+  font-size: 10px;
+  color: #727272;
+}
+
+/* 당근페이 */
 #user_info>.content1>.pay {
   width: 400px;
   height: 184px;
+  padding: 20px 24px;
+  box-sizing: border-box;
   background-color: #EAF7E4;
   border-radius: 20px;
+}
+/* 당근페이 로고 ~ 자세히보기 */
+#user_info>.content1>.pay>.pay_top {
+  display: flex;
+  column-gap: 185px;
+}
+#user_info>.content1>.pay>.pay_top>.pay_logo {
+  width: 91px;
+  height: 32px;
+  text-indent: -9999px;
+  background-size : cover;
+  background: url(../images/mypage/images/ico_pay_img.svg) no-repeat 0 0;
+}
+#user_info>.content1>.pay>.pay_top>a {
+  /* position: relative; */
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+}
+#user_info>.content1>.pay>.pay_top>a:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../images/mypage/icon/ico_arrow_right.svg) no-repeat 5px 2px;
+}
+
+/* 당근하는 새로운 ~ 120,000원 */
+#user_info>.content1>.pay>ul>li:first-of-type {
+  padding-top: 7px;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  color: #727272;
+}
+#user_info>.content1>.pay>ul>li:last-of-type {
+  margin-top: -5px;
+  font-size: 25px;
+  font-family: 'Pretendard-Bold';
+}
+#user_info>.content1>.pay>ul>li:last-of-type>span {
+  line-height: 3.5;
+  font-size: 18px;
+  font-family: 'Pretendard-Semibold';
+}
+
+/* 충전하기 ~ 계좌송금 */
+#user_info>.content1>.pay>.pay_bottom {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 30px;
+  margin-top: -3px;
+  font-size: 14px;
+  font-family: 'Pretendard-Semibold';
+}
+#user_info>.content1>.pay>.pay_bottom>a:first-of-type {
+  position: relative;
+  display: inline-block;
+  width: 165px;
+  height: 37px;
+  line-height: 37px;
+  padding-left: 20px;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+}
+#user_info>.content1>.pay>.pay_bottom>a:first-of-type:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 48px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/mypage/icon/ico_coin.svg) no-repeat;
+}
+#user_info>.content1>.pay>.pay_bottom>a:last-of-type {
+  position: relative;
+  display: inline-block;
+  width: 165px;
+  height: 37px;
+  line-height: 37px;
+  padding-left: 17px;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+}
+#user_info>.content1>.pay>.pay_bottom>a:last-of-type:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 45px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/mypage/icon/ico_dollar.svg) no-repeat;
 }
 
 /* 나의 거래 전체 */
@@ -212,20 +428,828 @@ a {
   width: 970px;
   /* height: 250px; */
   padding: 70px 0 0 70px;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 #deal_info>h2 {
   font-size: 32px;
   font-family: 'Pretendard-Bold';
 }
 
-/* footer */
-#footer {
-  display: inline-block;
-  width: 1920px;
+/* 판매내역 */
+#deal_info>.sales>h3 {
+  margin-top: 40px;
+  font-size: 24px;
+  font-family: 'Pretendard-Bold';
 }
-#footer>.foot_img {
+#deal_info>.sales>dl {
+  display: flex;
+  /* 판매내역 안 컨텐츠들 기준 */
+  position: relative;
+}
+#deal_info>.sales>dl>dt {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Pretendard-Regular';
+}
+
+/* 1. 판매중 content */
+/* on붙으면 밑줄 생김 */
+#deal_info>.sales>dl>dt.sales_title.on {
+  font-family: 'Pretendard-Semibold';
+  border-bottom: 3px solid #FF8A3D;
+}
+
+/* 판매중 content 슬라이드 기차 */
+#deal_info>.sales>dl>dd.sales_cont {
+  display: none;
+  /* absolute로 위치잡기 */
+  position: absolute;
+  top: 63px;
+  left: 0;
+  width: 880px;
+  height: 390px;
+  background: #FAFAFA;
+  overflow: hidden;
+}
+/* on붙으면 보이기 */
+#deal_info>.sales>dl>dd.sales_cont.on {
+  display: block;
+}
+
+/* 배경 제외한 컨텐츠 알맹이 부분 */
+.prod_slides {
+  display: flex;
+  gap: 40px;
+  /* width: px; */
+  height: 277px;
+  padding: 50px 55px;
+
+}
+li.prod {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 0px;
+}
+
+/* 첫번째 상품 */
+li.prod:first-of-type>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:first-of-type>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:first-of-type>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:first-of-type>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:first-of-type>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:first-of-type>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 두번째 상품 */
+li.prod:nth-of-type(2)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(2)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(2)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(2)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(2)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(2)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 세번째 상품 */
+li.prod:nth-of-type(3)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(3)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(3)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(3)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(3)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(3)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 네번째 상품 */
+li.prod:nth-of-type(4)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(4)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(4)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(4)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(4)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(4)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 다섯번째 상품 */
+li.prod:nth-of-type(5)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(5)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(5)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(5)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(5)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(5)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 여섯번째 상품 */
+li.prod:nth-of-type(6)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(6)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(6)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(6)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(6)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(6)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 일곱번째 상품 */
+li.prod:nth-of-type(7)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(7)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(7)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(7)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(7)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(7)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 여덟번째 상품 */
+li.prod:nth-of-type(8)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(8)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(8)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(8)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(8)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(8)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 아홉번째 상품 */
+li.prod:nth-of-type(9)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(9)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(9)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(9)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(9)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(9)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 열번째 상품 */
+li.prod:nth-of-type(10)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(10)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(10)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(10)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(10)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(10)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 열한번째 상품 */
+li.prod:nth-of-type(11)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(11)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(11)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(11)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(11)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(11)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 열두번째 상품 */
+li.prod:nth-of-type(12)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(12)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(12)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(12)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(12)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(12)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 열세번째 상품 */
+li.prod:nth-of-type(13) {
+  /* margin: 0 -40px 0 0; */
+}
+li.prod:nth-of-type(13)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+li.prod:nth-of-type(13)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+li.prod:nth-of-type(13)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+li.prod:nth-of-type(13)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+li.prod:nth-of-type(13)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+li.prod:nth-of-type(13)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 2. 거래완료 content */
+/* on붙으면 밑줄 생김 */
+#deal_info>.sales>dl>dt.deal_title.on {
+  border-bottom: 3px solid #FF8A3D;
+  font-family: 'Pretendard-Semibold';
+}
+
+#deal_info>.sales>dl>dd.deal_cont {
+  display: none;
+  /* absolute로 위치잡기 */
+  position: absolute;
+  top: 63px;
+  left: 0;
+  width: 880px;
+  height: 390px;
+  background: #FAFAFA;
+  overflow: hidden;
+}
+/* on붙으면 보이기 */
+#deal_info>.sales>dl>dd.deal_cont.on {
+  display: block;
+}
+
+#deal_info>.sales>dl>dd.deal_cont>ul {
+  display: flex;
+  gap: 40px;
+  width: 860px;
+  height: 277px;
+  padding: 50px 55px;
+  user-select: none;
+}
+#deal_info>.sales>dl>dd.deal_cont>ul>li {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 0px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+/* 첫번째 상품 */
+#deal_info>.sales>dl>dd.deal_cont>ul>li:first-of-type>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+#deal_info>.sales>dl>dd.deal_cont>ul>li:first-of-type>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+#deal_info>.sales>dl>dd.deal_cont>ul>li:first-of-type>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+#deal_info>.sales>dl>dd.deal_cont>ul>li:first-of-type>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+#deal_info>.sales>dl>dd.deal_cont>ul>li:first-of-type>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+#deal_info>.sales>dl>dd.deal_cont>ul>li:first-of-type>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 두번째 상품 */
+#deal_info>.sales>dl>dd.deal_cont>ul>li:nth-of-type(2)>a>img {
+  /* padding-bottom: 10px; */
+  border-radius: 15px;
+}
+/* 상품 타이틀 */
+#deal_info>.sales>dl>dd.deal_cont>ul>li:nth-of-type(2)>a {
+  /* padding-bottom: 5px; */
+  line-height: 2.7;
+  font-size: 13px;
+  font-family: 'Pretendard-Regular';
+  text-decoration: none;
+}
+/* 상품 가격 - 숫자*/
+#deal_info>.sales>dl>dd.deal_cont>ul>li:nth-of-type(2)>ul>li:first-of-type {
+  font-size: 13px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 상품 가격 - 원 */
+#deal_info>.sales>dl>dd.deal_cont>ul>li:nth-of-type(2)>ul>li:first-of-type>span {
+  font-size: 10px;
+  font-family: 'Pretendard-Semibold';
+}
+/* 주소 */
+#deal_info>.sales>dl>dd.deal_cont>ul>li:nth-of-type(2)>ul>li:nth-of-type(2) {
+  line-height: 2.2;
+  font-size: 11px;
+  font-family: 'Pretendard-Regular';
+}
+/* 관심/채팅 */
+#deal_info>.sales>dl>dd.deal_cont>ul>li:nth-of-type(2)>ul>li:last-of-type {
+  font-size: 10px;
+  font-family: 'Pretendard-Regular';
+  color: #777777;
+}
+
+/* 3. 숨김 content */
+#deal_info>.sales>dl>dt.hide_title.on {
+  border-bottom: 3px solid #FF8A3D;
+  font-family: 'Pretendard-Semibold';
+  font-weight: bold;
+}
+#deal_info>.sales>dl>dd.hide_cont {
+  display: none;
+  /* absolute로 위치잡기 */
+  position: absolute;
+  top: 63px;
+  left: 0;
+  width: 880px;
+  height: 390px;
+  background: #FAFAFA;
+  overflow: hidden;
+}
+/* on붙으면 보이기 */
+#deal_info>.sales>dl>dd.hide_cont.on {
+  display: block;
+}
+#deal_info>.sales>dl>dd.hide_cont>p {
+  line-height: 390px;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Pretendard-Regular';
+  color: #838383;
+}
+
+/* 구매내역 */
+#deal_info>.purchase>h3 {
+  margin-top: 430px;
+  font-size: 24px;
+  font-family: 'Pretendard-Bold';
+}
+/* 구매내역 content */
+#deal_info>.purchase>.purchase_cont {
+  width: 880px;
+  height: 419px;
+  margin-top: 20px;
+  background: #FAFAFA;
+  overflow: hidden;
+}
+#deal_info>.purchase>.purchase_cont>p {
+  margin: 195px auto;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Pretendard-Regular';
+  color: #929292;
+}
+
+/* 중고거래 가계부 */
+#deal_info>.account_book>h3 {
+  margin-top: 40px;
+  font-size: 24px;
+  font-family: 'Pretendard-Bold';
+}
+/* 중고거래 가계부 detail */
+#deal_info>.account_book>.account_book_detail {
+  position: relative;
+  width: 880px;
+  height: 419px;
+  margin-top: 20px;
+  padding: 50px 45px;
+  box-sizing: border-box;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+}
+#deal_info>.account_book>.account_book_detail>h4 {
+  font-size: 32px;
+  font-family: 'Pretendard-Bold';
+}
+#deal_info>.account_book>.account_book_detail>p:first-of-type {
+  padding: 15px 0 40px 0;
+  font-size: 15px;
+  font-family: 'Pretendard-Regular';
+  color: #9f9f9f;
+}
+#deal_info>.account_book>.account_book_detail>dl>dt {
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-family: 'Pretendard-Regular';
+}
+#deal_info>.account_book>.account_book_detail>dl>dd {
+  position: relative;
+  font-size: 32px;
+  font-family: 'Pretendard-Bold';
+}
+#deal_info>.account_book>.account_book_detail>dl>dd:after {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 786px;
+  height: 1px;
+  background: #D9D9D9;
+}
+#deal_info>.account_book>.account_book_detail>p:nth-of-type(2) {
+  position: absolute;
+  top: 50px;
+  right: 45px;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Pretendard-Semibold';
+  border-radius: 50%;
+  background: #FF8A3D;
+  color: #fff;
+}
+#deal_info>.account_book>.account_book_detail>p:last-of-type {
+  padding-top: 60px;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Pretendard-Regular';
+  color: #9f9f9f;
+}
+
+/* 비즈프로필 배너 */
+#container>#deal_info>.banner {
+  display: flex;
+  width: 880px;
+  height: 151px;
+  margin-top: 70px;
+  background: #FDF6EC url(../images/mypage/images/ico_mini_banner.svg) no-repeat 50px 50%;
+  background-size: 72px;
+  border-radius: 5px;
+}
+#container>#deal_info>.banner>p>strong {
+  line-height: 1.5;
+  font-size: 24px;
+  font-family: 'Pretendard-Bold';
+}
+#container>#deal_info>.banner>p {
+  padding: 45px 0 0 160px;
+  font-size: 20px;
+  font-family: 'Pretendard-Regular';
+}
+#container>#deal_info>.banner>span>a {
+  display: block;
+  width: 198px;
+  height: 50px;
+  line-height: 50px;
+  margin: 55px 0 0 150px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  background: #FF8A3D;
+  border-radius: 5px;
+}
+
+/* 푸터 위 배너 */
+.foot_bnn {
+  width: 1920px;
+  margin-top: -30px;
+}
+.foot_bnn>.foot_bnn_inner {
   height: 360px;
-  background: red url(../images/mypage/main_banner_img.jpg) no-repeat 0 0;
+  padding: 90px 0 0 330px;
+  box-sizing: border-box;
+  background: url(../images/mypage/images/main_banner_img.jpg) no-repeat 0 0;
   background-size: cover;
+}
+.foot_bnn>.foot_bnn_inner>p:first-of-type {
+  padding-bottom: 45px;
+  font-size: 36px;
+  font-family: 'Pretendard-Bold';
+}
+.foot_bnn>.foot_bnn_inner>p:last-of-type {
+  font-size: 24px;
+  font-family: 'Pretendard-Regular';
 }
