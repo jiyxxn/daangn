@@ -19,6 +19,9 @@
   font-style: normal;
 }
 /* common */
+*{
+  box-sizing: border-box;
+}
 body{
   color: #191919;
   width: 1920px;
@@ -204,7 +207,7 @@ div.content1 > div.manner_detail>div.temp>span:first-of-type::after{
   bottom: -6px;
   width: 7px;
   height: 3px;
-  background: url(../images/mypage/icon/ico_triangle.png) no-repeat 0 0;
+  background: url(../images/mypage/icon/ico_triangle.svg) no-repeat 0 0;
 }
 div.content1 > div.manner_detail>div.temp>span:nth-of-type(2){
   float: right;
@@ -298,7 +301,7 @@ div.content1 > div.pay_detail>ul>li:last-child > a{
   background: url(../images/mypage/icon/ico_dollar.svg) no-repeat 31% 50%;
 }
 /* 자세히보기 */
-div.content1 > div> span:last-of-type{
+div.content1 > div> a{
   position: absolute;
   right: 24px;
   top: 20px;
@@ -348,17 +351,31 @@ div.content2 > dl>dt.on>a{
 
 div.content2 > dl>dd{
   position: absolute;
+  display: none;
   left: 0;
   top: 40px;
   width: 100%;
   height: 420px;
   background-color: #FAFAFA;
-  padding-top: 48px;
-  padding-left: 44px;
+  /* padding-top: 48px;
+  padding-left: 44px; */
+  overflow: hidden;
 }
+div.content2 > dl>dd.on{
+  display: block;
+}
+
 div.content2 > dl>dd>ul{
   display: flex;
-  overflow-x: scroll;
+  transform: translateX(0);
+  border: 1px solid red;
+  padding-top: 48px;
+  padding-left: 44px;
+  width: 100%;
+  height: 100%;
+}
+div.content2 > dl>dd>ul>li{
+  user-select: none;
 }
 ul.product_item > li.product_img {
   width: 200px;
@@ -385,19 +402,13 @@ ul.product_item >li:nth-child(5){
   font-size: 10px;
   color: #777;
 }
-/* 판매중 */
-dd.selling {
-  z-index: 5;
-}
-
-/*거래완료  */
-dd.complete{
-  display: none;
-}
-
-/* 숨김  */
-dd.hide {
-  display: none;
+dd.hide>span{
+  display: block;
+  font-size: 15px;
+  color: #838383;
+  text-align: center;
+  position: relative;
+  top: 43%
 }
 
 /* content3 */
@@ -503,14 +514,17 @@ div.finance_rec >p:last-of-type::before{
 /* 푸터 위 배너 */
 div.mypage_banner{
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 42px;
   width: 100%;
   height: 360px;
   background: url(../images/mypage/images/main_banner_img.jpg) no-repeat 0 0;
   background-size: cover;
+  padding-left: 29px;
 }
 div.mypage_banner>span:first-child{
-  position: relative;
-  z-index: 4;
   font-family: 'Pretendard-SemiBold';
   font-size:36px ;
 }
