@@ -255,7 +255,7 @@ section.content1 > div.mnDegree > ul.degree > li:nth-child(3) > span:last-child:
   clear: both;
   width: 7px;
   height: 4px;
-  background: url(../images/mypage/icon/ico_triangle.png) no-repeat 0 0;
+  background: url(../images/mypage/icon/ico_triangle.svg) no-repeat 0 0;
   top: 17px;
   left: 50%;
   transform: translateX(-50%);
