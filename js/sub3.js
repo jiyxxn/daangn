@@ -1,5 +1,9 @@
 $(document).ready(function (){
 
+  document.addEventListener("click", e=> {
+    e.preventDefault();
+  })
+  
   var bMove = false;
   var startX = 0;
   var scrollLeft = 0;
