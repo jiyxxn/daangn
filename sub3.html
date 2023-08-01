@@ -6,11 +6,137 @@
 
   <link rel="stylesheet" href="css/sub3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script defer src="js/main.js"></script>
   <script defer src="js/sub3.js"></script>
   <title>마이페이지 | 당근마켓</title>
 </head>
 <body>
   <div id="wrap">
+    <!-- header -->
+    <header id="header">
+      <!-- header_inner1 -->
+      <div class="header_inner1">
+        <!-- logo -->
+        <h1 class="logo">
+          <a href="index.html"><img src="images/index/source/images/logo_main.png" width="170" alt="당근마켓 로고" /></a>
+        </h1>
+        <!-- // logo -->
+
+        <!-- 검색창 -->
+        <div class="srch_input">
+          <input type="search" placeholder="물품이나 동네를 검색해보세요" />
+          <a class="bg-SEARCH" href="#">검색창</a>
+        </div>
+        <!-- // 검색창 -->
+
+        <!-- 채팅하기 -->
+        <div class="botton">
+          <a href="#" class="btn_chat">채팅하기</a>
+          <!-- //채팅하기 -->
+        </div>
+      </div>
+      <!-- // header_inner1 -->
+
+      <!-- header_inner2 -->
+      <div class="header_inner2">
+        <!-- 중고거래 카테고리 전체 -->
+        <div class="category_menu" tabindex=0>
+          <a href="#" class="category_title" tabindex=-1>중고거래 카테고리</a>
+          <!-- menu_wrap에 on붙으면 하위메뉴 풀다운 -->
+          <div class="menu_wrap">
+            <ul>
+              <li class="menu_title title_top" tabindex=-1><a href="#" tabindex=-1>인기매물</a></li>
+              <!-- // 인기매물 -->
+
+              <li class="menu_title title_life" tabindex=-1><a href="#" tabindex=-1>라이프</a>
+                <ul class="slide_menu cont_life">
+                  <li class="menu_p"><a href="#" tabindex=-1>생활가전</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>스포츠/레저</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>생활/주방</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>티켓/교환권</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>가구/인테리어</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>도서</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>유아동</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>기타 중고물품</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>가공식품</a></li>
+                </ul>
+              </li>
+              <!-- // 라이프 -->
+
+              <li class="menu_title title_digital" tabindex=-1><a href="#" tabindex=-1>디지털/핸드폰</a>
+                <ul class="slide_menu cont_digital">
+                  <li class="menu_p"><a href="#" tabindex=-1>디지털 기기</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>취미/게임/음반</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>생활/주방</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>유아동</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>기타 중고물품</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>유아도서</a></li>
+                </ul>
+              </li>
+              <!-- // 디지털/핸드폰 -->
+
+              <li class="menu_title title_fashion"><a href="#" tabindex=-1>패션</a>
+                <ul class="slide_menu cont_fashion" tabindex=-1>
+                  <li class="menu_p"><a href="#" tabindex=-1>여성패션</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>남성패션/잡화</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>여성잡화</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>유아동</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>기타 중고물품</a></li>
+                </ul>
+              </li>
+              <!-- // 패션 -->
+
+              <li class="menu_title title_beauty"><a href="#" tabindex=-1>뷰티/미용</a></li>
+              <!-- // 뷰티/미용 -->
+
+              <li class="menu_title title_pet"><a href="#" tabindex=-1>반려용품</a>
+                <ul class="slide_menu cont_pet">
+                  <li class="menu_p"><a href="#" tabindex=-1>반려동물용품</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>식물</a></li>
+                </ul>
+              </li>
+              <!-- // 반려용품 -->
+
+              <li class="menu_title title_car"><a href="#" tabindex=-1>부동산/자동차</a>
+                <ul class="slide_menu cont_car">
+                  <li class="menu_p"><a href="#" tabindex=-1>삽니다</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>부동산</a></li>
+                  <li class="menu_p"><a href="#" tabindex=-1>부동산</a></li>
+                </ul>
+              </li>
+              <!-- // 부동산/자동차 -->
+            </ul>
+          </div>
+
+          <!-- 클릭시 변경될 좌측 화살표 -->
+          <a href="#" class="btn_left_arrow" tabindex=-1></a>
+        </div>
+        <!-- // 중고거래 카테고리 전체 -->
+
+        <!-- 네비게이션 -->
+        <nav id="nav">
+          <ul>
+            <li><a href="#">동네가게</a></li>
+            <li><a href="#">알바</a></li>
+            <li><a href="#">동네생활</a></li>
+            <li><a href="#">내 근처</a></li>
+            <li><a href="#">부동산 직거래</a></li>
+            <li><a href="#">중고차 직거래</a></li>
+          </ul>
+        </nav>
+        <!-- // 네비게이션 -->
+
+        <!-- 탑메뉴 -->
+        <ul class="topMenu">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">나의당근</a></li>
+        </ul>
+        <!-- // 탑메뉴 -->
+      </div>
+      <!-- // header_inner2 -->
+    </header>
+    <!-- // header -->
     <div id="container">
       <aside id="aside">
         <h2 class="blind">프로필</h2>
@@ -222,6 +348,13 @@
               </p>
             </dl>
           </article>
+          <article class="purchase">
+            <h3>구매내역</h3>
+            <div>
+              구매내역이 없어요.<br>
+              동네 이웃과 따뜻한 거래를 해보세요.
+            </div>
+          </article>
           <!-- 중고거래 가계부 -->
           <article class="budget">
             <h3>중고거래 가계부</h3>
@@ -259,6 +392,46 @@
       <p>동네 이웃들이 자주 가는<br>동네 가게</p>
       <p>우리 동네 사람들이<br>이용하는 가게를 찾아보세요.</p>
     </div>
+      <!-- footer -->
+  <footer>
+    <div class="foot-container">
+      <div class="foot_inner">
+        <div class="footer-left">
+          <div class="pay-logo">
+            <img src="images/index/source/images/danguenpay_logo.png" width="100%" alt="">
+          </div>
+          <address>
+              <span>대표 김용현, 황도연ㅣ사업자번호 375-8700088 </span><br>
+              <span>직업정보제공사업 신고번호 2016 - 서울서초 - 0051</span> <br>
+              <span>주소 서울특별시 구로구 디지털로 30길 28, 609호 (당근서비스)</span><br>
+              <span>전화 1544-9796ㅣ고객문의 cs@daangnservice.com</span>
+          </address>
+          <ul class="foot-txt">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">위치기반서비스 이용약관</a></li>
+            <li><a href="#">이용자보호 비전과 계획</a></li>
+          </ul>
+        </div>
+        <div class="footer-middle">당근마켓</div>
+        <div class="footer-right">
+          <div class="foot-txt">당근페이 고객센터 &nbsp; 1877-9735 <br>
+              운영시간 : 평일 10:00 - 19:00<br>
+              (점심시간 13:00 - 14:00)</div>
+          <div class="foot-txt">당근페이 금융피해신고 &nbsp; 1877-9734 <br>
+              운영시간 : 평일 10:00 - 익일 02:00 <br>
+              (점심시간 13:00 - 14:00)</div>
+          <ul class="foot-txt">
+            <li><a href="#">제휴 문의</a></li>
+            <li><a href="#">광고 문의</a></li>
+            <li><a href="#">PR 문의</a></li>
+            <li><a href="#">IR 문의</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
   </div>
   <!-- //#wrap -->
 </body>
