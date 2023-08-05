@@ -1,7 +1,33 @@
-// 점핑이벤트 삭제
-document.addEventListener("click", (e) => {
+// 검색버튼 점핑이벤트 삭제
+const btnSrch = document.querySelector(".bg-SEARCH");
+btnSrch.addEventListener('click', e => {
   e.preventDefault();
-});
+})
+
+// 채팅하기 버튼 점핑이벤트 삭제
+const btnChat = document.querySelector(".btn_chat");
+btnChat.addEventListener('click', e => {
+  e.preventDefault();
+})
+
+// 네비게이션, 탑메뉴 점핑이벤트 삭제
+const gnb = document.getElementById("nav");
+gnb.addEventListener('click', e => {
+  e.preventDefault();
+})
+
+const topMenu = document.querySelector(".topMenu");
+topMenu.addEventListener('click', e => {
+  e.preventDefault();
+})
+
+// 앱버튼 점핑이벤트 삭제
+const btnApp = document.querySelectorAll("ul.app_store>li>a");
+for (let i=0; i<btnApp.length; i++) {
+  btnApp[i].addEventListener('click', e => {
+    e.preventDefault();
+  })
+}
 
 // 중고거래 카테고리 클릭 이벤트
 var categoryBtn = document.querySelector(".category_title");
@@ -9,6 +35,7 @@ var menuWrap = document.querySelector(".menu_wrap");
 
 let open = true
 categoryBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   if(open){
     menuWrap.style.height = menuWrap.scrollHeight + "px";
     categoryBtn.classList.add("on");
@@ -27,7 +54,8 @@ document.querySelectorAll(".slide_menu").forEach(function(menu) {
 })
 var menuTitles = document.querySelectorAll(".menu_title");
 menuTitles.forEach(function (menuTitle) {
-  menuTitle.addEventListener("click", function () {
+  menuTitle.addEventListener("click", function (e) {
+    e.preventDefault();
     isClick = true;
     var ul = menuTitle.querySelector("ul.slide_menu");
     if (ul.style.maxHeight){
@@ -100,14 +128,16 @@ var bannerWidth = bannerItems[1].offsetWidth;
 console.log(bannerWidth);
 
 // 이전 버튼 클릭 이벤트
-prevBtn.addEventListener("click", function () {
+prevBtn.addEventListener("click", function (e) {
+  e.preventDefault();
   prevIndex = currentIndex;
   currentIndex--;
   updateSlide();
 });
 
 // 다음 버튼 클릭 이벤트
-nextBtn.addEventListener("click", function () {
+nextBtn.addEventListener("click", function (e) {
+  e.preventDefault();
   prevIndex = currentIndex;
   currentIndex++;
   updateSlide();
@@ -141,7 +171,8 @@ function updateSlide() {
 
 // 페이지네이션 클릭 이벤트
 for (var i = 0; i < bannerRollLinks.length; i++) {
-  bannerRollLinks[i].addEventListener("click", function () {
+  bannerRollLinks[i].addEventListener("click", function (e) {
+    e.preventDefault();
     prevIndex = currentIndex;
     currentIndex = parseInt(this.getAttribute("data-slide-index"));
 
