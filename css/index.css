@@ -41,7 +41,7 @@
 }
 
 /* common */
-a, a:hover {
+a {
   text-decoration: none;
   color: #333;
 }
