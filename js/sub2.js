@@ -1,7 +1,7 @@
 // 점핑이벤트 삭제
-document.addEventListener("click", (e) => {
-  e.preventDefault();
-});
+// document.addEventListener("click", (e) => {
+//   e.preventDefault();
+// });
 
 
 /* 판매내역 클릭 이벤트 */
@@ -11,6 +11,7 @@ const salesTitleBtn = document.querySelector("dt.sales_title");
 const salesCont = document.querySelector("dd.sales_cont");
 
 salesTitleBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   salesTitleBtn.classList.add("on");
   salesCont.classList.add("on");
   // 거래완료,숨김 on제거
@@ -25,6 +26,7 @@ const dealTitleBtn = document.querySelector("dt.deal_title");
 const dealCont = document.querySelector("dd.deal_cont");
 
 dealTitleBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   dealTitleBtn.classList.add("on");
   dealCont.classList.add("on");
   // 판매중,숨김 on제거
@@ -39,6 +41,7 @@ const hideTitleBtn = document.querySelector("dt.hide_title");
 const hideCont = document.querySelector("dd.hide_cont");
 
 hideTitleBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   hideTitleBtn.classList.add("on");
   hideCont.classList.add("on");
   // 판매중,거래완료 on제거
