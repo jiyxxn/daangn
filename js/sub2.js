@@ -1,9 +1,3 @@
-// 점핑이벤트 삭제
-// document.addEventListener("click", (e) => {
-//   e.preventDefault();
-// });
-
-
 /* 판매내역 클릭 이벤트 */
 
 // 판매중
