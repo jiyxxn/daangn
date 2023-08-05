@@ -1,3 +1,22 @@
+// nav 점핑이벤트 삭제
+const btnNav = document.getElementById("sub_nav");
+btnNav.addEventListener('click', e => {
+  e.preventDefault();
+})
+
+// user info 점핑이벤트 삭제
+const btnInfo = document.getElementById("user_info");
+btnInfo.addEventListener('click', e => {
+  e.preventDefault();
+})
+
+// deal info 점핑이벤트 삭제
+const btnDeal = document.getElementById("deal_info");
+btnDeal.addEventListener('click', e => {
+  e.preventDefault();
+})
+
+
 /* 판매내역 클릭 이벤트 */
 
 // 판매중
