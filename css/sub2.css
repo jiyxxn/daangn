@@ -46,26 +46,25 @@ button {
 
 #wrap {
   width: 1920px;
-  margin-top: 70px;
   overflow: hidden;
 }
 
 #container {
   width: 1320px;
   height: 2277px;
-  margin: 0 auto;
+  margin: 69px auto 0;
 }
 
 /* 네비게이션 */
 /* 프로필 */
-#nav {
+#sub_nav {
   float: left;
   width: 330px;
   height: 1282px;
   padding-top: 40px;
   background-color: #fafafa;
 }
-#nav>span {
+#sub_nav>span {
   display: block;
   width: 217px;
   height: 217px;
@@ -74,7 +73,7 @@ button {
   background-size: cover;
   text-indent: -9999px;
 }
-#nav>a {
+#sub_nav>a {
   display: block;
   width: 290px;
   height: 45px;
@@ -89,23 +88,23 @@ button {
 }
 
 /* 카테고리 */
-#nav>ul {
+#sub_nav>ul {
   position: relative;
   margin-top: 25px;
   border-top: 4px solid #FF8A3D;
 }
 /* 메뉴 타이틀 공통 style */
-#nav>ul>li>a {
+#sub_nav>ul>li>a {
   display: block;
   width: 330px;
   height: 120px;
   font-family: 'Pretendard-Bold';
 }
-#nav>ul>li.deal>a,
-#nav>ul>li.town>a,
-#nav>ul>li.shop>a,
-#nav>ul>li.business>a,
-#nav>ul>li.other>a {
+#sub_nav>ul>li.deal>a,
+#sub_nav>ul>li.town>a,
+#sub_nav>ul>li.shop>a,
+#sub_nav>ul>li.business>a,
+#sub_nav>ul>li.other>a {
   display: block;
   width: 330px;
   height: 53px;
@@ -116,7 +115,7 @@ button {
 }
 /* 메뉴 타이틀 개별 아이콘 */
 /* 나의거래 */
-#nav>ul>li.deal>a:before {
+#sub_nav>ul>li.deal>a:before {
   content: "";
   position: absolute;
   top: 15px;
@@ -126,7 +125,7 @@ button {
   background: url(../images/mypage/icon/ico_menu.svg) no-repeat 0 0;
 }
 /* 나의 동네생활 */
-#nav>ul>li.town>a:before {
+#sub_nav>ul>li.town>a:before {
   content: "";
   position: absolute;
   top: 239px;
@@ -136,7 +135,7 @@ button {
   background: url(../images/mypage/icon/ico_menu_02.svg) no-repeat 0 0;
 }
 /* 동네 가게 */
-#nav>ul>li.shop>a:before {
+#sub_nav>ul>li.shop>a:before {
   content: "";
   position: absolute;
   top: 365px;
@@ -146,7 +145,7 @@ button {
   background: url(../images/mypage/icon/ico_menu_03.svg) no-repeat 0 0;
 }
 /* 나의 비즈니스 */
-#nav>ul>li.business>a:before {
+#sub_nav>ul>li.business>a:before {
   content: "";
   position: absolute;
   top: 493px;
@@ -156,7 +155,7 @@ button {
   background: url(../images/mypage/icon/ico_menu_04.svg) no-repeat 0 0;
 }
 /* 기타 */
-#nav>ul>li.other>a:before {
+#sub_nav>ul>li.other>a:before {
   content: "";
   position: absolute;
   top: 683px;
@@ -167,14 +166,14 @@ button {
 }
 
 /* 하위메뉴 */
-#nav>ul>li>ul {
+#sub_nav>ul>li>ul {
   padding: 20px 0 20px 62px;
 }
-#nav>ul>li>ul>li {
+#sub_nav>ul>li>ul>li {
   line-height: 2;
   font-family: 'Pretendard-Regular';
 }
-#nav>ul>li>ul>li>a:hover {
+#sub_nav>ul>li>ul>li>a:hover {
   font-weight: bold;
   color: #FF8A3D;
 }
@@ -992,7 +991,7 @@ li.prod:nth-of-type(13)>ul>li:last-of-type {
 
 #deal_info>.sales>dl>dd.deal_cont>ul {
   display: flex;
-  gap: 40px;
+  gap: 34px;
   width: 860px;
   height: 277px;
   padding: 50px 55px;
