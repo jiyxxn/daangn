@@ -46,7 +46,6 @@ categoryBtn.addEventListener("click", (e) => {
     open = true
   }
 })
-let isClick = false;
 
 // 하위메뉴 클릭 이벤트
 document.querySelectorAll(".slide_menu").forEach(function(menu) {
