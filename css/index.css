@@ -608,7 +608,7 @@ margin-top: 150px;
 }
 
 /* '인기검색어 메인 텍스트 서식*/
-h3.title_psw {
+h4.title_psw {
 margin-bottom: 50px; /*타이틀과 픽토그램 간 마진 조절*/
 color: #191919;
 font-family: 'GmarketSansBold';
@@ -681,7 +681,7 @@ margin-top: 200px;
 }
 
 /* '중고거래인기매물 메인 텍스트 서식*/
-article.sec_hand_transaction h3 {
+article.sec_hand_transaction h4 {
 margin-bottom: 50px; /*타이틀과 픽토그램 간 마진 조절*/
 color: #191919;
 font-family: 'GmarketSansBold';
@@ -960,7 +960,7 @@ article.pay-detail-img {
       display: block;
       clear: both;
     }
-      h3.faq-main-txt{
+      h4.faq-main-txt{
         text-align: center;
         margin-bottom: 58px;
         font-family: 'Pretendard-SemiBold';
