@@ -81,6 +81,16 @@ a {
   background-color: #ff8a3d;
 }
 
+/* 로고 */
+h1.logo>a {
+  display: inline-block;
+  width: 168px;
+  height: 47px;
+  background: url(../images/index/source/images/logo_main.png) no-repeat 0 0;
+  background-size: contain;
+  text-indent: -9999px; overflow:hidden;
+}
+
 /* 검색창 */
 .srch_input {
   display: flex;
