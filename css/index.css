@@ -764,7 +764,7 @@ font-weight: 400;
 
 /* 중고거래 인기매물 관심, 채팅 텍스트 */
 ul.list_row_sht > li p.chat_sht {
-color: #777777;
+color: #767676;
 font-size: 10px;
 font-weight: 400;
 }
@@ -780,7 +780,7 @@ a.text_downsize_wrap {
 }
 
 a.text_more_wrap, a.text_downsize_wrap {
-  color: #888;
+  color: #767676;
   font-family: 'Inter', sans-serif;
   font-family: 'Pretendard-Regular';
   font-style: normal;
@@ -803,7 +803,7 @@ display: none;
 /* 띠배너 */
 article.banner_line_img {
 position: relative;
-width: 1920px;
+width: 100%;
 margin-top: 150px;
 }
 
@@ -828,6 +828,7 @@ article.banner_line_img div.button_img img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
 }
 /* //지윤  */
 

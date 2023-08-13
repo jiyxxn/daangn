@@ -99,7 +99,6 @@ var currentIndex = 1;
 var pageIndex = 1;
 var totalItems = actualBannerItems.length;
 var bannerWidth = bannerItems[1].offsetWidth;
-console.log(bannerWidth);
 
 // 이전 버튼 클릭 이벤트
 prevBtn.addEventListener("click", function (e) {
@@ -214,8 +213,6 @@ window.onload=function(){
   const text_downsize_wrap = document.querySelector('.text_downsize_wrap');
   const wrap_02_sht = document.querySelector('.wrap_sht_02');
 
-  console.log(text_more_wrap, wrap_02_sht, text_downsize_wrap);
-
   text_more_wrap.addEventListener('click', e => {
     e.preventDefault();
     wrap_02_sht.style.display = 'block';
@@ -233,14 +230,16 @@ window.onload=function(){
 
 
 // faq
-$(".que").click(function(){
+$(".que").click(function(e){
+  e.preventDefault();
   $(this).next(".anw").stop().slideToggle(400);
   $(this).toggleClass("on").siblings().removeClass("on");
   $(this).next(".anw").siblings(".anw").slideUp(400);
 })
 
 // faq 포커싱 이벤트 
-$(".que").focusin(function(){
+$(".que").focusin(function(e){
+  e.preventDefault();
   $(this).next(".anw").stop().slideToggle(400); 
   $(this).toggleClass("on").siblings().removeClass("on");  
   $(this).next(".anw").siblings(".anw").slideUp(400); 
