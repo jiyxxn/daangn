@@ -449,7 +449,7 @@ a.btn_left_arrow {
   transition: all 0.5s ease-in-out;
   transform: translateX(-1920px);
 }
-.banner_frame section {
+.banner_frame article {
   position: relative;
   width: 1920px;
   height: 100%;
@@ -458,45 +458,45 @@ a.btn_left_arrow {
   background-position: center;
 }
 /* 각 배너 이미지 */
-.banner_frame section:nth-child(1) {
+.banner_frame article:nth-child(1) {
   background-image: url(../images/index/source/images/main_image_4.png);
   background-size: cover;
   z-index: 1;
 }
-.banner_frame section:nth-child(2) {
+.banner_frame article:nth-child(2) {
   background-image: url(../images/index/source/images/main_image_1.png);
   background-size: cover;
   z-index: 4;
 }
-.banner_frame section:nth-child(3) {
+.banner_frame article:nth-child(3) {
   background-image: url(../images/index/source/images/main_image_2.png);
   background-size: cover;
   z-index: 3;
 }
-.banner_frame section:nth-child(4) {
+.banner_frame article:nth-child(4) {
   background-image: url(../images/index/source/images/main_image_3.png);
   background-size: cover;
   z-index: 2;
 }
-.banner_frame section:nth-child(5) {
+.banner_frame article:nth-child(5) {
   background-image: url(../images/index/source/images/main_image_4.png);
   background-size: cover;
   z-index: 1;
 }
-.banner_frame section:nth-child(6) {
+.banner_frame article:nth-child(6) {
   background-image: url(../images/index/source/images/main_image_1.png);
   background-size: cover;
   z-index: 4;
 }
 
 /* 배너 텍스트 */
-.banner_item > article {
+.banner_item > div {
   position: absolute;
   bottom: 140px;
   left: 210px;
   text-align: left;
 }
-.banner_item h3 {
+.banner_item p:first-of-type {
   display: block;
   margin-bottom: 15px;
   color: #fff;
@@ -535,7 +535,7 @@ a.btn_left_arrow {
 }
 /* 홀수번째 텍스트 색상 (4번 슬라이드 복제로 인해 4번-2번-4번(1,3,5번째) 이미지에 해당) */
 .banner_item:nth-child(odd) ul li,
-.banner_item:nth-child(odd) h3 {
+.banner_item:nth-child(odd) p:first-of-type {
   color: #191919;
 }
 .banner_item:nth-child(odd) .download {
