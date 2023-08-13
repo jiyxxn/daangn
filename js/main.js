@@ -4,31 +4,6 @@ btnSrch.addEventListener('click', e => {
   e.preventDefault();
 })
 
-// 채팅하기 버튼 점핑이벤트 삭제
-const btnChat = document.querySelector(".btn_chat");
-btnChat.addEventListener('click', e => {
-  e.preventDefault();
-})
-
-// 네비게이션, 탑메뉴 점핑이벤트 삭제
-const gnb = document.getElementById("nav");
-gnb.addEventListener('click', e => {
-  e.preventDefault();
-})
-
-const topMenu = document.querySelector(".topMenu");
-topMenu.addEventListener('click', e => {
-  e.preventDefault();
-})
-
-// 앱버튼 점핑이벤트 삭제
-const btnApp = document.querySelectorAll("ul.app_store>li>a");
-for (let i=0; i<btnApp.length; i++) {
-  btnApp[i].addEventListener('click', e => {
-    e.preventDefault();
-  })
-}
-
 // 중고거래 카테고리 클릭 이벤트
 var categoryBtn = document.querySelector(".category_title");
 var menuWrap = document.querySelector(".menu_wrap");
@@ -54,7 +29,7 @@ document.querySelectorAll(".slide_menu").forEach(function(menu) {
 var menuTitles = document.querySelectorAll(".menu_title");
 menuTitles.forEach(function (menuTitle) {
   menuTitle.addEventListener("click", function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     isClick = true;
     var ul = menuTitle.querySelector("ul.slide_menu");
     if (ul.style.maxHeight){
@@ -241,13 +216,15 @@ window.onload=function(){
 
   console.log(text_more_wrap, wrap_02_sht, text_downsize_wrap);
 
-  text_more_wrap.addEventListener('click', function(){
+  text_more_wrap.addEventListener('click', e => {
+    e.preventDefault();
     wrap_02_sht.style.display = 'block';
     text_more_wrap.style.display = "none";
     text_downsize_wrap.style.display = 'block';
   })
   
-  text_downsize_wrap.addEventListener('click', function(){
+  text_downsize_wrap.addEventListener('click', e => {
+    e.preventDefault();
     wrap_02_sht.style.display = 'none';
     text_more_wrap.style.display = "block";
     text_downsize_wrap.style.display = 'none';
