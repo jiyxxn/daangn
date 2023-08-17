@@ -681,7 +681,7 @@ margin-top: 200px;
 }
 
 /* '중고거래인기매물 메인 텍스트 서식*/
-article.sec_hand_transaction h2 a {
+article.sec_hand_transaction h2 {
 margin-bottom: 50px; /*타이틀과 픽토그램 간 마진 조절*/
 color: #191919;
 font-family: 'GmarketSansBold';
