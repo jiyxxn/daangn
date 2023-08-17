@@ -1,9 +1,6 @@
 $(document).ready(function (){
 
-  document.addEventListener("click", e=> {
-    e.preventDefault();
-  })
-  
+ 
   var bMove = false;
   var startX = 0;
   var scrollLeft = 0;
@@ -44,6 +41,7 @@ $(document).ready(function (){
   
   for(let d=0; d<dt.length; d++){
     dt[d].addEventListener("click", e => {
+      e.preventDefault();
       dl.forEach(item => {
         item.classList.remove("active");
       })
