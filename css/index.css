@@ -184,7 +184,7 @@ input::-webkit-search-results-decoration{
 }
 .topMenu a {
   font-size: 15px;
-  color: #9f9f9f;
+  color: #595959;
 }
 .topMenu a:hover {
   color: #333;
@@ -934,12 +934,12 @@ article.pay-detail-img {
       }
         p.pay-title{
           position: relative;
-          font-size: 30pt;
-          line-height: 1.8;
-          font-family: 'GmarketSansBold';
+          font-size: 82px;
+          font-family: 'GmarketSansMedium';
+          margin-bottom: 22px;
         }
           p.pay-title > span {
-            color: #FF8A3D;
+            font-family: 'GmarketSansBold';
           }
         p.pay-subtitle {
           position: relative;
